@@ -15,7 +15,6 @@ import { HomeComponent } from './modules/home/home/home.component'
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,5 @@ import { faFilm } from '@fortawesome/free-solid-svg-icons';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {
-    library.add(faFilm);
-  }
+  constructor() {}
  }

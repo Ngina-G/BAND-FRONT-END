@@ -1,17 +1,23 @@
 body{
-  background: #fff;
-  color: #fff;
+  background: black;
   display: flex;
+  flex-direction: column;
+  font-family: 'Inconsolata', monospace;
+  padding: 3em;
+}
+.pomo-container{
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   font-family: 'Inconsolata', monospace;
-}
-app-root{
+  padding: 1em;
+  border: none;
+  border-radius: 25px;
+
   background: #f85032;
   background: -webkit-linear-gradient(to bottom, #f85032, #e73827);
   background: linear-gradient(to bottom, #f85032, #e73827);
   min-width: 300px;
+  width: 360px;
 
   @media screen and (max-width: 349px){
     min-width: 100%;
@@ -24,7 +30,7 @@ app-root{
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
   }
 }
-header{
+#pomo-header{
   background-color: rgba(255,255,255,.1);
   height: 100%;
   padding: 20px;
@@ -44,6 +50,8 @@ button{
   border-radius: 50%;
   border: 0;
   box-shadow: 1px 2px 2px rgba(0,0,0, .2);
+  margin-left: .5em;
+  margin-right: .5em;
 }
 .change{
   height: 1.8em;

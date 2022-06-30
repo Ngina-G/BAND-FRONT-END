@@ -1,37 +1,44 @@
-<header class="text-center"> 
+<body class="text-center">
+
+<div class="container-fluid pomo-container">
+  <header  id="pomo-header"> 
     <h4>Pomodoro timer (angular2)</h4>
-    </header>
-      <svg class="circle">
-        <circle r="50" cx="200" cy="200" [style.strokeDashoffset]="dashoffestUpdate"></circle>
-      </svg>
+  </header>
+
+  <svg class="circle">
+    <circle r="50" cx="200" cy="200" [style.strokeDashoffset]="dashoffestUpdate"></circle>
+  </svg>
       
-              <h2 class="timer" *ngIf="!isBreak">
+  <h2 class="timer" *ngIf="!isBreak">
     {{mins}} : {{secs < 10 ? "0" + secs  : secs}}
-    </h2>
+  </h2>
     
-    <div *ngIf="isBreak">
+  <div *ngIf="isBreak">
     <h2>time for break!</h2>
-    {{breakMins}} : {{breakSecs < 10 ? "0" + breakSecs  : breakSecs}}</div>
-     <button id="go" *ngIf="!isRunning" (click)="run()"><i class="fas fa-play"></i>
-    </button>
+    {{breakMins}} : {{breakSecs < 10 ? "0" + breakSecs  : breakSecs}}
+  </div>
+
+  <div class="pomo-btns">
+    <button id="go" *ngIf="!isRunning" (click)="run()"><i class="fa fa-play"></i></button>
     
-    <button id="pause" *ngIf="isRunning" (click)="pause()"><i class="fas fa-pause"></i>
-    </button>
+    <button id="pause" *ngIf="isRunning" (click)="pause()"><i class="fa fa-pause"></i></button>
     
-    <button id="reset" *ngIf="isRunning" (click)="reset()"><i class="fas fa-undo-alt"></i>
-    
-    </button>
-    <div class="options">
+    <button id="reset" *ngIf="isRunning" (click)="reset()"><i class="fa fa-rotate-left"></i></button>  
+  </div>
+
+  <div class="options">
     <p>
-    change length of session time: 
+    change session time: 
     <button class="change" (click)="decrease()">-</button>
       {{mins}} 
     <button class="change" (click)="increase()">+</button> 
     </p>
     <p>
-    change length of break time: 
+    change break time: 
     <button class="change" (click)="decreaseBreak()">-</button>
      {{breakMins}}   <button class="change" (click)="increaseBreak()">+</button>
-    
     </p>
-    </div>
+  </div>
+</div>
+
+</body>
