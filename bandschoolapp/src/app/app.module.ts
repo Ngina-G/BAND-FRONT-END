@@ -8,11 +8,20 @@ import { MatCardModule } from '@angular/material/card';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { PomodoroComponent } from './modules/home/pages/pomodoro/pomodoro/pomodoro.component';
+import { HomeComponent } from './modules/home/home/home.component'
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PomodoroComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,9 +31,14 @@ import { AppComponent } from './app.component';
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    library.add(faFilm);
+  }
+ }
