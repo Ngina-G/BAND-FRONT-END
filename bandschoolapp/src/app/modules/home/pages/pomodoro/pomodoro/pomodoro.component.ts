@@ -23,11 +23,18 @@ export class PomodoroComponent implements OnInit {
     dashoffestUpdate = 2 * Math.PI * 100;
     heightVal = 100;
     // heightPX = heightVal +'px';
-  
+  playAudio(){
+  let audio = new Audio();
+  audio.src = "../../../../../../assets/media/audio/mixkit-interface-hint-notification-911.wav";
+  audio.load();
+  audio.play();
+  }
+
   run(){
     this.isRunning = true;
     this.counter();
     this.isBreak = false;
+    this.playAudio();
     
   }
   
@@ -58,6 +65,7 @@ export class PomodoroComponent implements OnInit {
   }
   breakTime(){
     this.counterBreak();
+    this.playAudio();
    console.log("time for break");
   }
   
