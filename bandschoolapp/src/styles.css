@@ -2,3 +2,6 @@
 @import "~font-awesome/css/font-awesome.min.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Poller+One&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+body{
+    background: #FEFCEE;
+}

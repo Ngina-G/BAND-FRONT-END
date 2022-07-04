@@ -1,6 +1,10 @@
 app-navbar{
     width: 22%;
     margin-left: -.8em;
+    margin-right: -4.5em;
+}
+#home-comp{
+    margin-left: -3.5em;
 }
 /* The button used to open the sidebar */
 .clickBtn {
