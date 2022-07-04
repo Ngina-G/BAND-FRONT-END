@@ -1,3 +1,6 @@
+.back-g{
+    overflow: hidden;
+}
 app-navbar{
     width: 22%;
     margin-left: -.8em;
@@ -7,6 +10,9 @@ app-navbar{
     margin-left: -3.5em;
 }
 /* The button used to open the sidebar */
+.menu-btn{
+    position: sticky;
+}
 .clickBtn {
     font-size: 20px;
     cursor: pointer;
