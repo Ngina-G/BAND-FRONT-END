@@ -34,6 +34,9 @@ i{
     background-color: #DCB90A;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* nav{
+    width: 30vw;
+} */
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
