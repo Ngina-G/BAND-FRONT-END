@@ -1,0 +1,40 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* BUTTONS */
+button{
+    padding: 1.5rem .8rem 1.5rem .8rem;
+    border-radius: 12%;
+    width: 10vw;
+    border: none;
+}
+#color-note{
+    background: #1DD8EE;
+}
+#color-note:hover{
+    background: #1BE7FF;
+}
+#color-task{
+    background: #DCB90A;
+}
+#color-task:hover{
+    background: #EAC50B;
+}
+#color-category{
+    background: #173152;
+}
+#color-category:hover{
+    background: #274871;
+}
+.add-text{
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: .3em;
+}
+.add-backg{
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary{
+    justify-content: center;
+}
