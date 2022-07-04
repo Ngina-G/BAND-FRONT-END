@@ -1,21 +1,23 @@
 body{
-  background: black;
+  background: #173152;
   display: flex;
   flex-direction: column;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Poppins', sans-serif;
   padding: 3em;
 }
 .pomo-container{
   justify-content: center;
   align-items: center;
-  font-family: 'Inconsolata', monospace;
   padding: 1em;
-  border: none;
-  border-radius: 25px;
+  border-radius: 5%;
+  color: #fff;
+  padding-top: 4em;
+  padding-bottom: 3em;
 
-  background: #f85032;
+  background: #274871;
   background: -webkit-linear-gradient(to bottom, #f85032, #e73827);
-  background: linear-gradient(to bottom, #f85032, #e73827);
+  background: #274871;
+  border: 1px solid #DCB90A;
   min-width: 300px;
   width: 360px;
 
@@ -31,7 +33,7 @@ body{
   }
 }
 #pomo-header{
-  background-color: rgba(255,255,255,.1);
+  background-color: #173152;
   height: 100%;
   padding: 20px;
   margin-bottom: 50px;
@@ -52,6 +54,10 @@ button{
   box-shadow: 1px 2px 2px rgba(0,0,0, .2);
   margin-left: .5em;
   margin-right: .5em;
+  background-color: #1BD5EA;
+}
+#go{
+  background-color: #DCB90A;
 }
 .change{
   height: 1.8em;
@@ -73,7 +79,7 @@ svg circle{
   stroke-dashoffset: 0px;
   stroke-linecap: round;
   stroke-width: 5px;
-  stroke: red;
+  stroke: #274871;
   fill: none;
 } 
    /* animation: countdown 10s linear infinite forwards */
@@ -82,7 +88,7 @@ svg circle{
     padding: 5px 0 15px 0;
     margin-top: 3em;
     font-size: .8em;
-    background-color: rgba(255,255,255,.1)
+    background-color: #173152;
 }
 p:last-child{
     margin-bottom: 0;
