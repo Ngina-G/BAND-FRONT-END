@@ -1,0 +1,41 @@
+#nav-back{
+    background-color: #274871;
+    color: white;
+    border-radius: 0px 40px 0px 0px;
+    transition: 0.5s;
+    font-size: 18px;
+}
+#menu li{
+    padding-bottom: 1em;
+}
+a{
+    color: white;
+}
+a:hover{
+    color:#1BE7FF;
+}
+i{
+    color: #1BE7FF;
+    margin-right: .5em;
+}
+
+/* The button used to open the sidebar */
+.clickBtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #173152;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+.clickBtn:hover {
+    transition: .5s;
+    background-color: #DCB90A;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
