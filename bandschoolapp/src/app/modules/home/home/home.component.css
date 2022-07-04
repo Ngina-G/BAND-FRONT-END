@@ -38,3 +38,15 @@ button{
 .btn-primary{
     justify-content: center;
 }
+
+/* NOTES */
+.note-backg{
+    background-color: #fff;
+    border-radius: 10px;
+}
+.card-body{
+    padding: 1.4em 3em 1.4em 3em;
+}
+small{
+    font-size: 11px;
+}
