@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-notes.component.css']
 })
 export class AllNotesComponent implements OnInit {
-
+  show = false;
   constructor() { }
 
   ngOnInit(): void {

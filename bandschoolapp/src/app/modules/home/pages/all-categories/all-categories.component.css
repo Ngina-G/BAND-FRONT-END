@@ -11,10 +11,10 @@ body{
     border: none;
 }
 #color-category{
-    background: #173152;
+    background: #DCB90A;
 }
 #color-category:hover{
-    background: #274871;
+    background: #EAC50B;
 }
 
 .add-backg{
@@ -29,7 +29,7 @@ body{
 .category-cards{
     font-weight: 500;
     padding: 1em;
-    background: #1DD8EE;
+    background: #274871;
     border-radius: 15px;
     height: 100vh;
 }

@@ -1,0 +1,85 @@
+#tasks-container{
+    background: #fff;
+}
+.task-cards{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 1em;
+    background: #1DD8EE;
+    border-radius: 15px;
+}
+.task-backg{
+    padding: .3em .5em .2em .5em;
+    border: none;
+    border-radius: 17px;
+}
+
+/* BUTTON */
+.btn-primary{
+    padding: 1.5rem .8rem 1.5rem .8rem;
+    border-radius: 12%;
+    width: 10vw;
+    border: none;
+}
+#color-task{
+    background: #DCB90A;
+}
+#color-task:hover{
+    background: #EAC50B;
+}
+
+.add-text{
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: .3em;
+}
+.add-backg{
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary{
+    justify-content: center;
+}
+.add-backg{
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary{
+    justify-content: center;
+}
+
+/* app-comp */
+.back-g{
+    overflow: hidden;
+}
+app-navbar{
+    width: 22%;
+    margin-left: -.8em;
+    margin-right: -4.5em;
+}
+#home-comp{
+    margin-left: -3.5em;
+}
+/* The button used to open the sidebar */
+.menu-btn{
+    position: sticky;
+}
+.clickBtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #173152;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-left: -.5em;
+  }
+  
+.clickBtn:hover {
+    transition: .5s;
+    background-color: #DCB90A;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
