@@ -14,8 +14,6 @@ import { PomodoroComponent } from './modules/home/pages/pomodoro/pomodoro/pomodo
 import { HomeComponent } from './modules/home/home/home.component';
 import { AllCategoriesComponent } from './modules/home/pages/all-categories/all-categories.component';
 import { AllNotesComponent } from './modules/home/pages/all-notes/all-notes.component';
-import { AllTasksComponent } from './modules/home/pages/all-tasks/all-tasks.component';
-import { AddCategoryComponent } from './modules/home/pages/add-category/add-category.component';
 import { AddNoteComponent } from './modules/home/pages/add-note/add-note.component';
 import { AddTaskComponent } from './modules/home/pages/add-task/add-task.component';
 
@@ -31,12 +29,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     NavbarComponent,
     TaskbarhomepageComponent,
-    AddCategoryComponent,
     AddNoteComponent,
     AddTaskComponent,
     AllCategoriesComponent,
     AllNotesComponent,
-    AllTasksComponent,
   ],
   imports: [
     BrowserModule,
