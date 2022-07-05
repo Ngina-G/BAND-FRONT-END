@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AddTaskComponent implements OnInit {
 
   constructor() { }
-
+  show = false;
   ngOnInit(): void {
   }
 

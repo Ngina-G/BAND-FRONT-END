@@ -7,48 +7,54 @@
         </div>
 
 <!-- CONTENT -->
-        <div class="col-7 col-md-10" id="home-comp">
-            <body>
+        <div class="col-7 col-md-7" id="home-comp">
                 <div id="home-container" class="container">
-                    <div class="row d-flex w-100">
-
-                <!-- ADD CATEGORY BUTTON -->
-                            <div class="container mt-5 col-md-3">
-                                    <div class="col-sm add-backg">
-                                        <a href="/add-category">
-                                            <button class="btn btn-primary" id="color-category">
-                                                <i style="background: white; color:black; padding: .5em; border-radius:50px" class="fa-solid fa-plus"></i>
-                                                <div class="add-text">Category</div>
-                                            </button>
-                                        </a>
-                                    </div>
-                            </div>
-                
-                <!-- NOTES CONTAINER -->
-                            <div class="category-cards mt-5 col-md-9">
+                    <div class="row d-flex w-100">                
+                            <div class="col-md-1"></div>
+                <!-- CATEGORY CONTAINER -->
+                            <div class="category-cards mt-5 col-md-10">
                                 <h3 class="text-center text-white">Categories</h3>
 
                                     <!-- Ngfor category of categories -->
-                                <div class="card category-backg mt-4">
+                                <div class="card category-backg mt-4 mx-3">
                                     <div class="card-body ">
                                         <h4 class="category-text">Lorem Ipsum Dolor</h4>
                                     </div>
                                 </div>
 
-                                <div class="card category-backg mt-4">
+                                <div class="card category-backg mt-4 mx-3">
                                     <!-- Ngfor category of categories -->
                                     <div class="card-body ">
                                         <h4 class="category-text">Lorem Ipsum Dolor</h4>
                                     </div>
-                                </div>
-                        
-                            </div>
-                <!-- SIDE PANEL FOR PROFILE & TASKS -->
-                        
-                    </div>
-                
+                                </div>                       
+                            </div>                            
+                    </div>                
                 </div>
-                </body>
         </div>
+                <!-- SIDE PANEL FOR ADD CATEGORY -->
+
+        <div class="col">
+            <div class="col-md-12 ml-5 mt-5 " id="add-category-container">
+                    <div class="task-cards">
+                        <h3 class="text-center">Add Category</h3>
+            
+                        <div class="card task-backg mt-4 p-3">
+                            <!-- Ngfor task of tasks -->
+                                <div class="form-check mx-4 mt-3">
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="InputNewCategory" class="form-label">New Category</label>
+                                          <input type="text" class="form-control" id="InputNewCategory" placeholder="Add ..">
+                                        </div>
+                                        <button type="submit" class="add-btn p-2 px-3">Add</button>
+                                      </form>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+
     </div>
 </div>

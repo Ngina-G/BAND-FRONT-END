@@ -46,6 +46,21 @@ body{
     font-size: 18px;
 }
 
+/* FORM */
+.form-check{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+}
+.add-btn{
+    border: none;
+    border-radius: 5px;
+    background: #DCB90A;
+}
+.add-btn:hover{
+    background: #EAC50B;
+}
+
 
 /* app-comp */
 .back-g{
