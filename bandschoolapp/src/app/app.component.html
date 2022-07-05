@@ -1,18 +1,1 @@
-<div class="container-fluid back-g">
-    <div class="row flex-nowrap">
-        <app-navbar class="" *ngIf="show"></app-navbar>
-        <div class="col-md-1 mt-3">
-            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
-        </div>
-
-        <div class="col-7 col-md-8" id="home-comp">
-            <app-home></app-home>
-        </div>
-        <div class="col">
-            <app-taskbarhomepage></app-taskbarhomepage>
-        </div>
-
-    </div>
-</div>
 <router-outlet></router-outlet>
-<!-- <app-pomodoro></app-pomodoro> -->

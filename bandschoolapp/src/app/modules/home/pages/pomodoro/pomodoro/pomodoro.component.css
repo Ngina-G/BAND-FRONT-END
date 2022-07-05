@@ -4,6 +4,8 @@ body{
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
   padding: 3em;
+  overflow-y: hidden;
+
 }
 .pomo-container{
   justify-content: center;
@@ -12,8 +14,9 @@ body{
   border-radius: 5%;
   color: #fff;
   padding-top: 4em;
-  padding-bottom: 3em;
-
+  padding-bottom: 5.23em;
+  
+  
   background: #274871;
   background: -webkit-linear-gradient(to bottom, #f85032, #e73827);
   background: #274871;
