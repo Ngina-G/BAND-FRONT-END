@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-categories.component.css']
 })
 export class AllCategoriesComponent implements OnInit {
-
+  show= false;
   constructor() { }
 
   ngOnInit(): void {

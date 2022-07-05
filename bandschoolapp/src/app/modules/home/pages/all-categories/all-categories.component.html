@@ -1,1 +1,54 @@
-<p>all-categories works!</p>
+<div class="container-fluid back-g">
+    <div class="row flex-nowrap">
+<!-- NAVBAR -->
+        <app-navbar class="" *ngIf="show"></app-navbar>
+        <div class="col-md-1 mt-3">
+            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
+        </div>
+
+<!-- CONTENT -->
+        <div class="col-7 col-md-10" id="home-comp">
+            <body>
+                <div id="home-container" class="container">
+                    <div class="row d-flex w-100">
+
+                <!-- ADD CATEGORY BUTTON -->
+                            <div class="container mt-5 col-md-3">
+                                    <div class="col-sm add-backg">
+                                        <a href="/add-category">
+                                            <button class="btn btn-primary" id="color-category">
+                                                <i style="background: white; color:black; padding: .5em; border-radius:50px" class="fa-solid fa-plus"></i>
+                                                <div class="add-text">Category</div>
+                                            </button>
+                                        </a>
+                                    </div>
+                            </div>
+                
+                <!-- NOTES CONTAINER -->
+                            <div class="category-cards mt-5 col-md-9">
+                                <h3 class="text-center">Categories</h3>
+
+                                    <!-- Ngfor category of categories -->
+                                <div class="card category-backg mt-4">
+                                    <div class="card-body ">
+                                        <h4 class="category-text">Lorem Ipsum Dolor</h4>
+                                    </div>
+                                </div>
+
+                                <div class="card category-backg mt-4">
+                                    <!-- Ngfor category of categories -->
+                                    <div class="card-body ">
+                                        <h4 class="category-text">Lorem Ipsum Dolor</h4>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                <!-- SIDE PANEL FOR PROFILE & TASKS -->
+                        
+                    </div>
+                
+                </div>
+                </body>
+        </div>
+    </div>
+</div>
