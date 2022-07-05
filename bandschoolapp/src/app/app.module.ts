@@ -16,7 +16,6 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomepage/taskbarhomepage.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 @NgModule({
   declarations: [

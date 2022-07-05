@@ -14,7 +14,7 @@
                 <!-- NAVBAR -->
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu" >
                     <li class="nav-item">
-                        <a href="/categories" class="nav-link align-middle px-0">
+                        <a href="/all-categories" class="nav-link align-middle px-0">
                             <i class="fa-solid fa-boxes-stacked"></i> <span class="ms-1 d-none d-sm-inline">Categories</span>
                         </a>
                     </li>
@@ -24,7 +24,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/tasks" class="nav-link px-0 align-middle">
+                        <a href="/all-tasks" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-list-check"></i> <span class="ms-1 d-none d-sm-inline">Tasks</span>
                         </a>
                     </li>
@@ -44,12 +44,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="categories" data-bs-toggle="collapse" class="nav-link px-0 align-middle mt-4">
+                        <a href="/all-categories" data-bs-toggle="collapse" class="nav-link px-0 align-middle mt-4">
                             <i class="fa-solid fa-square"></i> 
-                            <span class="ms-1 d-none d-sm-inline" style="color: #DCB90A;">Jane's Categories
+                            <span class="ms-1 d-none d-sm-inline" style="color: #DCB90A;">My Categories
                                 <ul class="category-list text-white" style="font-size: 15px;margin-top: 1em;">
                                     <!-- <li *ngFor="let category of categories"></li> -->
-                                    <li>Math</li>
+                                    <li><a href="/category:id" style="text-decoration: none;">Math</a></li>
                                 </ul>
                             </span>
                         </a>
