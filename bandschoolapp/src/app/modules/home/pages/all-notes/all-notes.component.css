@@ -1,6 +1,13 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px #DCB90A;
+}
 /* BUTTONS */
 .btn-primary{
     padding: 1.5rem .8rem 1.5rem .8rem;

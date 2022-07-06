@@ -42,8 +42,15 @@ body{
     padding: 1.4em 3em 1.4em 3em;
     font-size: 10px
 }
+.card:hover{
+    box-shadow: 5px 5px 20px #1BE7FF;
+}
 .category-text{
     font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
 /* FORM */
