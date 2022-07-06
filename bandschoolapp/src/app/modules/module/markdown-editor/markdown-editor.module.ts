@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { EditorComponent } from './editor/editor.component';
 
 import { MarkdownEditorOptions } from './mark-down-editor-options';
-
+import { MarkDownEditorComponent } from './mark-down-editor/mark-down-editor.component';
 @NgModule({
   declarations: [
-    EditorComponent
+    EditorComponent,
+    MarkDownEditorComponent
   ],
   imports: [
     CommonModule
@@ -15,16 +16,4 @@ import { MarkdownEditorOptions } from './mark-down-editor-options';
     EditorComponent
   ]
 })
-export class MarkdownEditorModule { 
-
-    /**
-   * A static method to provide configuration to the [MarkdownEditorModule].
-   */
-     static forRoot(config: MarkdownEditorOptions) {
-      return {
-        ngModule: MarkdownEditorModule,
-        providers: [{provide: MarkdownEditorOptions, useValue: config}]
-      };
-    }
-}
-
+export class MarkdownEditorModule { }

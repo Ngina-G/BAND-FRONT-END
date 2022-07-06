@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import '@github/markdown-toolbar-element'
 
 @Component({
   selector: 'app-editor',

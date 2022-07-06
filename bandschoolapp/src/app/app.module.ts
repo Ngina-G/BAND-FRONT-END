@@ -24,9 +24,6 @@ import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomep
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { MarkdownEditorModule } from './modules/module/markdown-editor/markdown-editor.module';
-import { MarkdownEditorOptions } from './modules/module/markdown-editor/mark-down-editor-options';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +48,6 @@ import { MarkdownEditorOptions } from './modules/module/markdown-editor/mark-dow
     MatInputModule,
     FormsModule,
     FontAwesomeModule,
-    MarkdownEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
