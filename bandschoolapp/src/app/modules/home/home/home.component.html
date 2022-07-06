@@ -1,4 +1,106 @@
-{{title}}
+<div class="container-fluid back-g">
+    <div class="row flex-nowrap">
+        <app-navbar class="" *ngIf="show"></app-navbar>
+        <div class="col-md-1 mt-3">
+            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
+        </div>
 
-<input type="text" #input [value]="title" (keyup)="updateTitle(input.value)">
+        <div class="col-7 col-md-8" id="home-comp">
+            <body>
+                <div id="home-container" class="container">
+                    <h1 style="font-weight: 600;">Welcome back, Jane!</h1>
+                    <small class="text-secondary">20th June,Sunday</small>
+                    
+                    <div class="row d-flex justify-content-end w-100">
+                        <div class="col vw-100">
+                            <div class="container mt-5 text-center">
+                
+                <!-- BUTTONS -->
+                                <div class="row">
+                                    <div class="col-sm add-backg">
+                                        <a href="">
+                                            <button class="btn btn-primary" id="color-note">
+                                                <i style="background: white; color:black; padding: .5em; border-radius:50px" class="fa-solid fa-plus"></i>
+                                                <div class="add-text">Note</div>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm add-backg">
+                                        <a href="">
+                                            <button class="btn btn-primary text-center" id="color-task">
+                                                <i style="background: white; color:black; padding: .5em; border-radius:50px" class="fa-solid fa-plus"></i>
+                                                <div class="add-text text-center">Task</div>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm add-backg">
+                                        <a href="">
+                                            <button class="btn btn-primary" id="color-category">
+                                                <i style="background: white; color:black; padding: .5em; border-radius:50px" class="fa-solid fa-plus"></i>
+                                                <div class="add-text">Category</div>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                <!-- NOTES CONTAINER -->
+                            <div class="note-cards mt-5">
+                                <div class="card note-backg mt-4">
+                                    <!-- Ngfor note of notes -->
+                                    <div class="card-body ">
+                                        <span class="card-title d-flex justify-content-between pb-3">
+                                            <h4 class="">Lorem Ipsum Dolor</h4>
+                                            <h5 style="color:#1DD8EE;">Math</h5>
+                                        </span>
+                                        <p class="card-text pb-1">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
+                                        </p>
+                                        <div class="text-muted"><small>2nd June 2022</small></div>
+                                    </div>
+                                </div>
+                        
+                                <div class="card note-backg mt-4">
+                                    <!-- Ngfor note of notes -->
+                                    <div class="card-body ">
+                                        <span class="card-title d-flex justify-content-between pb-3">
+                                            <h4 class="">Lorem Ipsum Dolor</h4>
+                                            <h5 style="color:#1DD8EE;">Science</h5>
+                                        </span>
+                                        <p class="card-text pb-1">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
+                                        </p>
+                                        <div class="text-muted"><small>2nd June 2022</small></div>
+                                    </div>
+                                </div>
+                        
+                                <div class="card note-backg mt-4">
+                                    <!-- Ngfor note of notes -->
+                                    <div class="card-body ">
+                                        <span class="card-title d-flex justify-content-between pb-3">
+                                            <h4 class="">Lorem Ipsum Dolor</h4>
+                                            <h5 style="color:#1DD8EE;">Flask</h5>
+                                        </span>
+                                        <p class="card-text pb-1">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
+                                        </p>
+                                        <div class="text-muted"><small>2nd June 2022</small></div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                <!-- SIDE PANEL FOR PROFILE & TASKS -->
+                        
+                    </div>
+                
+                </div>
+                </body>
+        </div>
+        <div class="col">
+            <app-taskbarhomepage></app-taskbarhomepage>
+        </div>
 
+    </div>
+</div>

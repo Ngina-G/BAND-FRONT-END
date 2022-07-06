@@ -1,0 +1,63 @@
+<div class="container-fluid back-g">
+    <div class="row flex-nowrap">
+<!-- NAVBAR -->
+        <app-navbar class="" *ngIf="show"></app-navbar>
+        <div class="col-md-1 mt-3">
+            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
+        </div>
+
+<!-- CONTENT -->
+        <div class="col-7 col-md-7" id="home-comp">
+                <div id="home-container" class="container">
+                    <div class="row d-flex w-100">                
+                            <div class="col-md-1"></div>
+                <!-- CATEGORY CONTAINER -->
+                            <div class="category-cards mt-5 col-md-10">
+                                <h3 class="text-center text-white">Categories</h3>
+
+                                    <!-- Ngfor category of categories -->
+                                <a href="/category">
+                                    <div class="card category-backg mt-4 mx-3">
+                                        <div class="card-body ">
+                                            <h4 class="category-text">Lorem Ipsum Dolor</h4>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="/category">
+                                    <div class="card category-backg mt-4 mx-3">
+                                        <div class="card-body ">
+                                            <h4 class="category-text">Lorem Ipsum Dolor</h4>
+                                        </div>
+                                    </div>
+                                </a>                      
+                            </div>                            
+                    </div>                
+                </div>
+        </div>
+                <!-- SIDE PANEL FOR ADD CATEGORY -->
+
+        <div class="col">
+            <div class="col-md-12 ml-5 mt-5 " id="add-category-container">
+                    <div class="task-cards">
+                        <h3 class="text-center">Add Category</h3>
+            
+                        <div class="card task-backg mt-4 p-3">
+                            <!-- Ngfor task of tasks -->
+                                <div class="form-check mx-4 mt-3">
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="InputNewCategory" class="form-label">New Category</label>
+                                          <input type="text" class="form-control" id="InputNewCategory" placeholder="Add ..">
+                                        </div>
+                                        <button type="submit" class="add-btn p-2 px-3">Add</button>
+                                      </form>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>

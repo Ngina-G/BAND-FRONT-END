@@ -1,5 +1,7 @@
 body{
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
 }
 /* BUTTONS */
 .btn-primary{
@@ -8,29 +10,13 @@ body{
     width: 10vw;
     border: none;
 }
-#color-note{
-    background: #1DD8EE;
-}
-#color-note:hover{
-    background: #1BE7FF;
-}
-#color-task{
+#color-category{
     background: #DCB90A;
 }
-#color-task:hover{
+#color-category:hover{
     background: #EAC50B;
 }
-#color-category{
-    background: #173152;
-}
-#color-category:hover{
-    background: #274871;
-}
-.add-text{
-    font-weight: 500;
-    font-size: 20px;
-    padding-top: .3em;
-}
+
 .add-backg{
     display: flex;
     flex-direction: column;
@@ -39,50 +25,48 @@ body{
     justify-content: center;
 }
 
-/* NOTES */
-.note-backg{
-    background-color: #fff;
-    border-radius: 10px;
+/* CATEGORIESS */
+.category-cards{
+    font-weight: 500;
+    padding: 1em;
+    background: #274871;
+    border-radius: 15px;
+    height: 100vh;
+}
+.category-backg{
+    padding: .3em .5em .2em .5em;
+    border: none;
+    border-radius: 45px;
 }
 .card-body{
     padding: 1.4em 3em 1.4em 3em;
+    font-size: 10px
 }
-small{
-    font-size: 11px;
+.card:hover{
+    box-shadow: 5px 5px 20px #1BE7FF;
+}
+.category-text{
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
-/* SIDE PANEL */
-#tasks-container{
-    background: #fff;
-}
-.task-cards{
+/* FORM */
+.form-check{
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    padding: 1em;
-    background: #1DD8EE;
-    border-radius: 15px;
-}
-.task-backg{
-    padding: .3em .5em .2em .5em;
-    border: none;
-    border-radius: 17px;
-}
 
-/* POFILE IMAGE */
-.profile-img{
-    background: url("../../../../assets/media/images/vitae-london-8BOZ2TxO2lQ-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
 }
-.image-back{
-    width: 150px;
-    height: 150px;
-}
-#task-card{
+.add-btn{
     border: none;
+    border-radius: 5px;
+    background: #DCB90A;
 }
-
+.add-btn:hover{
+    background: #EAC50B;
+}
 
 
 /* app-comp */

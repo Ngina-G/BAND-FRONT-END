@@ -1,0 +1,63 @@
+<div class="container-fluid back-g">
+    <div class="row flex-nowrap">
+
+        <!-- NAVBAR col-1 -->
+        <app-navbar class="" *ngIf="show"></app-navbar>
+        <div class="col-md-1 mt-3">
+            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
+        </div>
+
+<!-- CONTENT CONTAINER  col-2-->
+        <div class="col-7 col-md-10" id="home-comp">
+            <body>
+                <div id="home-container" class="container">
+                    <div class="row d-flex w-100 mx">
+                <!-- NOTE -->
+                <!-- col-2.a -->
+                            <div class="note-card mt-4 col-md-10">
+                                    <div class="card note-backg mt-4">
+                                        <!-- Ngfor note of notes -->
+                                        <div class="card-body lh-lg">
+                                            <span class="card-title d-flex justify-content-between pb-3">
+                                                <h4 class="px-4 pt-3">Lorem Ipsum Dolor</h4>
+                                            </span>
+                                            <p class="card-text px-5">
+
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales egestas ornare. Vivamus elementum massa vitae ornare pulvinar. Aliquam vehicula mauris eget condimentum tincidunt. Sed et orci in urna tempus faucibus. Morbi sed ex velit. Curabitur id nisl sit amet diam lobortis dapibus a sit amet ex. Pellentesque faucibus nec sapien at scelerisque. In velit mauris, vehicula nec est vitae, tempor suscipit dui. Maecenas pretium, lacus sed consectetur rutrum, ipsum purus accumsan mauris, at aliquam ex elit non arcu. Cras ultrices tortor at ante laoreet, et dignissim lectus fringilla. Maecenas non est fermentum, porttitor dui quis, vulputate orci.
+
+                                                In dolor metus, tincidunt et fringilla vel, tincidunt quis massa. Quisque ac velit magna. Maecenas et lobortis turpis. Maecenas ante dolor, fringilla non nibh vel, venenatis accumsan sem. Etiam orci elit, tempus a quam eu, volutpat vehicula ex. Sed et malesuada libero. Proin et pulvinar ex. Vivamus euismod lectus ac purus mollis efficitur. Duis aliquet, neque ac pharetra scelerisque, urna ante tincidunt tellus, sed mollis justo justo sed lorem. Nunc et hendrerit nisi. Sed vitae justo pharetra, vulputate mi a, congue purus. Integer massa orci, sodales aliquet accumsan vitae, condimentum ut ipsum. Integer maximus neque eu nibh varius, eget porta elit porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                                
+                                                Proin sit amet nisi luctus, suscipit sapien a, tempus augue. Aliquam hendrerit sem quam, in commodo purus porta quis. Cras efficitur pellentesque metus eget finibus. Vivamus rutrum rutrum purus, bibendum pretium quam vehicula sit amet. Vivamus tempus sem diam, id sollicitudin mauris consequat at. Praesent suscipit eu augue sed viverra. Aliquam purus arcu, condimentum nec iaculis sed, facilisis molestie orci.
+                                                
+                                                Sed suscipit tempor lorem, in tincidunt lectus efficitur sed. Etiam vulputate nisl vitae tristique auctor. Duis commodo fringilla mauris, vitae gravida velit. Nullam non libero sapien. Sed turpis enim, maximus in turpis in, posuere placerat risus. Vivamus dictum tincidunt urna, a vestibulum nulla ullamcorper quis. Aliquam efficitur tincidunt arcu, at fringilla nulla feugiat a. Maecenas dignissim nibh erat, interdum tincidunt eros luctus nec. Curabitur sed maximus est, iaculis iaculis nibh. Nullam eget eros vitae metus aliquet vestibulum a ultrices velit. Pellentesque risus ex, imperdiet vel mi nec, imperdiet molestie diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam ultricies tellus vitae eleifend ullamcorper. Suspendisse sit amet risus nisi. Donec vitae molestie lacus, et commodo diam.
+                                                
+                                                Vivamus suscipit, sem vel facilisis tristique, metus leo tempus purus, vitae varius urna odio vel tellus. Sed diam massa, finibus eget nisi eget, tempus sollicitudin metus. Etiam ac ultricies neque. Maecenas quis varius elit, a hendrerit sapien. Maecenas gravida arcu massa, eu ornare elit rutrum non. Aenean faucibus ac enim id molestie. Ut eros massa, hendrerit et laoreet vitae, commodo vel turpis. Duis at odio leo. Vestibulum consequat lobortis vehicula. Sed vel dapibus diam, vitae porttitor ligula. Integer rutrum magna efficitur dictum tincidunt. Curabitur imperdiet lorem vel laoreet rhoncus.                                            
+                                            </p>
+                                            <div class="text-muted"><small>2nd June 2022</small></div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        
+                <!-- ADD NOTE BUTTON -->
+                <!-- col-2.b -->
+                            <div class="container mt-5 col-md-1">
+                                <div class="col-sm add-backg">
+                                    <a href="/add-note">
+                                        <button class="btn btn-primary" id="color-note">
+                                            <i style="background: white; color:black; padding: .5em; border-radius:50px" class="fa-solid fa-plus"></i>
+                                            <div class="add-text">Note</div>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                
+                        
+                    </div>
+                
+                </body>
+        </div>
+
+    </div>
+</div>

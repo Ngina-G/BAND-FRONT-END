@@ -6,13 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  title: string = 'The title';
+  title: string = 'BAND';
+  show = false;
   constructor() {}
 
   ngOnInit() {}
 
-  updateTitle(value:string) {
-    console.log(`updateTitle: ${value}`);
-    this.title = value;
-  }
 }

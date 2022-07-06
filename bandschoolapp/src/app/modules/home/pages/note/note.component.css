@@ -1,5 +1,6 @@
-body{
+.container-fluid{
     font-family: 'Poppins', sans-serif;
+    background: #173152;
 }
 /* BUTTONS */
 .btn-primary{
@@ -14,22 +15,11 @@ body{
 #color-note:hover{
     background: #1BE7FF;
 }
-#color-task{
-    background: #DCB90A;
-}
-#color-task:hover{
-    background: #EAC50B;
-}
-#color-category{
-    background: #173152;
-}
-#color-category:hover{
-    background: #274871;
-}
 .add-text{
     font-weight: 500;
     font-size: 20px;
     padding-top: .3em;
+    color: black;
 }
 .add-backg{
     display: flex;
@@ -38,57 +28,21 @@ body{
 .btn-primary{
     justify-content: center;
 }
-
-/* NOTES */
-.note-backg{
-    background-color: #fff;
-    border-radius: 10px;
-}
 .card-body{
-    padding: 1.4em 3em 1.4em 3em;
+    background-color: #fff;
+    text-align: justify;
 }
-small{
-    font-size: 11px;
+body{
+    background: #173152;
 }
-
-/* SIDE PANEL */
-#tasks-container{
-    background: #fff;
-}
-.task-cards{
-    font-size: 14px;
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
-    padding: 1em;
-    background: #1DD8EE;
-    border-radius: 15px;
+    font-size: large;
 }
-.task-backg{
-    padding: .3em .5em .2em .5em;
-    border: none;
-    border-radius: 17px;
-}
-
-/* POFILE IMAGE */
-.profile-img{
-    background: url("../../../../assets/media/images/vitae-london-8BOZ2TxO2lQ-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-}
-.image-back{
-    width: 150px;
-    height: 150px;
-}
-#task-card{
-    border: none;
-}
-
-
 
 /* app-comp */
-.back-g{
-    overflow: hidden;
-}
+
 app-navbar{
     width: 22%;
     margin-left: -.8em;
@@ -104,7 +58,7 @@ app-navbar{
 .clickBtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #173152;
+    background-color: #274871;
     color: white;
     padding: 10px 15px;
     border: none;

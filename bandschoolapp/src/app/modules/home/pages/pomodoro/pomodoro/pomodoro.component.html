@@ -1,49 +1,51 @@
-<body class="text-center">
+<body class="text-center" id="pomodoro">
   
-  <div style="display: flex;color: #fff;">
-    <div id="logo" style="background-color: #1DD8EE;width:60px;height:60px;border: 7px solid #DCB90A; margin-right: 1em;"></div>
-    <p style="font-size: 32px;margin-top:.2em;font-family: 'Poller One', cursive;">BAND</p>
-  </div>
+  <a href="/" style="text-decoration: none;">
+    <div style="display: flex;color: #fff;">
+      <div id="logo" style="background-color: #1DD8EE;width:60px;height:60px;border: 7px solid #DCB90A; margin-right: 1em;"></div>
+      <p style="font-size: 32px;margin-top:.2em;font-family: 'Poller One', cursive;">BAND</p>
+    </div>
+  </a>
 
-<div class="container-fluid pomo-container">
-  <header  id="pomo-header"> 
-    <h4>Pomodoro timer</h4>
-  </header>
+  <div class="container-fluid pomo-container">
+    <header  id="pomo-header"> 
+      <h4>Pomodoro timer</h4>
+    </header>
 
-  <svg class="circle">
-    <circle r="50" cx="200" cy="200" [style.strokeDashoffset]="dashoffestUpdate"></circle>
-  </svg>
+    <svg class="circle">
+      <circle r="50" cx="200" cy="200" [style.strokeDashoffset]="dashoffestUpdate"></circle>
+    </svg>
+        
+    <h2 class="timer" *ngIf="!isBreak">
+      {{mins}} : {{secs < 10 ? "0" + secs  : secs}}
+    </h2>
       
-  <h2 class="timer" *ngIf="!isBreak">
-    {{mins}} : {{secs < 10 ? "0" + secs  : secs}}
-  </h2>
-    
-  <div *ngIf="isBreak">
-    <h2>time for break!</h2>
-    {{breakMins}} : {{breakSecs < 10 ? "0" + breakSecs  : breakSecs}}
-  </div>
+    <div *ngIf="isBreak">
+      <h2>time for break!</h2>
+      {{breakMins}} : {{breakSecs < 10 ? "0" + breakSecs  : breakSecs}}
+    </div>
 
-  <div class="pomo-btns">
-    <button id="go" *ngIf="!isRunning" (click)="run()"><i class="fa fa-play"></i></button>
-    
-    <button id="pause" *ngIf="isRunning" (click)="pause()"><i class="fa fa-pause"></i></button>
-    
-    <button id="reset" *ngIf="isRunning" (click)="reset()"><i class="fa fa-rotate-left"></i></button>  
-  </div>
+    <div class="pomo-btns">
+      <button id="go" *ngIf="!isRunning" (click)="run()"><i class="fa fa-play"></i></button>
+      
+      <button id="pause" *ngIf="isRunning" (click)="pause()"><i class="fa fa-pause"></i></button>
+      
+      <button id="reset" *ngIf="isRunning" (click)="reset()"><i class="fa fa-rotate-left"></i></button>  
+    </div>
 
-  <div class="options">
-    <p>
-    change session time: 
-    <button class="change" (click)="decrease()">-</button>
-      {{mins}} 
-    <button class="change" (click)="increase()">+</button> 
-    </p>
-    <p>
-    change break time:
-    <button class="change" (click)="decreaseBreak()">-</button>
-     {{breakMins}}   <button class="change" (click)="increaseBreak()">+</button>
-    </p>
+    <div class="options">
+      <p>
+      change session time: 
+      <button class="change" (click)="decrease()">-</button>
+        {{mins}} 
+      <button class="change" (click)="increase()">+</button> 
+      </p>
+      <p>
+      change break time:
+      <button class="change" (click)="decreaseBreak()">-</button>
+      {{breakMins}}   <button class="change" (click)="increaseBreak()">+</button>
+      </p>
+    </div>
   </div>
-</div>
 
 </body>
