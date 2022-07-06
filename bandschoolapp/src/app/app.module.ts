@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -23,7 +25,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomepage/taskbarhomepage.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { MarkdownEditorModule } from './modules/module/markdown-editor/markdown-editor.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatCardModule,
     MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
+    MarkdownEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

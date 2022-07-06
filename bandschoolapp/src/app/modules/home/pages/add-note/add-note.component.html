@@ -1,1 +1,13 @@
-<p>add-note works!</p>
+<form [formGroup]="form">
+    <div class="form-group">
+      <label for="Title">Title</label>
+      <input formControlName="title" class="form-control" id="Title" aria-describedby="Title">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <markdown-editor [control]="descriptionControl"></markdown-editor>
+    </div>
+  </form>
+  <div class="alert alert-info">
+    {{ form.value | json }}
+  </div>
