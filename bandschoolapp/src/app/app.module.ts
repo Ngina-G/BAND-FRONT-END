@@ -16,6 +16,8 @@ import { AllCategoriesComponent } from './modules/home/pages/all-categories/all-
 import { AllNotesComponent } from './modules/home/pages/all-notes/all-notes.component';
 import { AddNoteComponent } from './modules/home/pages/add-note/add-note.component';
 import { AddTaskComponent } from './modules/home/pages/add-task/add-task.component';
+import { NoteComponent } from './modules/home/pages/note/note.component';
+import { CategoryComponent } from './modules/home/pages/category/category.component';
 
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomepage/taskbarhomepage.component';
@@ -33,6 +35,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AddTaskComponent,
     AllCategoriesComponent,
     AllNotesComponent,
+    NoteComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

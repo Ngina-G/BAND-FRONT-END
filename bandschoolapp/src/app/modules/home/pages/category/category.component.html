@@ -1,0 +1,80 @@
+<div class="container-fluid back-g">
+    <div class="row flex-nowrap">
+        <app-navbar class="" *ngIf="show"></app-navbar>
+        <div class="col-md-1 mt-3">
+            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
+        </div>
+
+        <div class="col-7 col-md-10" id="home-comp">
+            <body>
+                <div id="home-container" class="container">
+                    <div class="row d-flex w-100">
+                <!-- ADD TASK BUTTON -->
+                            <div class="container mt-3">
+                                    <div class="col-sm add-backg">
+                                        <a href="/add-note">
+                                            <button class="btn btn-primary" id="color-note">
+                                                <i style="background: white; color:black; padding: .5em; border-radius:50px" class="fa-solid fa-plus"></i>
+                                                <div class="add-text">Note</div>
+                                            </button>
+                                        </a>
+                                    </div>
+                            </div>
+                
+                <!-- NOTES CONTAINER -->
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="note-cards col mt-1">
+                                    <h2 class="text-center mb-2">Specific category</h2>
+                                    <div class="card note-backg mt-4">
+                                        <!-- Ngfor note of notes -->
+                                        <div class="card-body ">
+                                            <span class="card-title d-flex justify-content-between pb-3">
+                                                <h4 class="">Lorem Ipsum Dolor</h4>
+                                            </span>
+                                            <p class="card-text pb-1">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
+                                            </p>
+                                            <div class="text-muted"><small>2nd June 2022</small></div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="card note-backg mt-4">
+                                        <!-- Ngfor note of notes -->
+                                        <div class="card-body ">
+                                            <span class="card-title d-flex justify-content-between pb-3">
+                                                <h4 class="">Lorem Ipsum Dolor</h4>
+                                            </span>
+                                            <p class="card-text pb-1">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
+                                            </p>
+                                            <div class="text-muted"><small>2nd June 2022</small></div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="card note-backg mt-4">
+                                        <!-- Ngfor note of notes -->
+                                        <div class="card-body ">
+                                            <span class="card-title d-flex justify-content-between pb-3">
+                                                <h4 class="">Lorem Ipsum Dolor</h4>
+                                            </span>
+                                            <p class="card-text pb-1">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
+                                            </p>
+                                            <div class="text-muted"><small>2nd June 2022</small></div>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+    
+                            </div>
+                        </div>
+                <!-- SIDE PANEL FOR PROFILE & TASKS -->
+                        
+                    </div>
+                
+                </body>
+        </div>
+
+    </div>
+</div>
