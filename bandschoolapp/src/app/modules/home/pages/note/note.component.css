@@ -1,0 +1,76 @@
+.container-fluid{
+    font-family: 'Poppins', sans-serif;
+    background: #173152;
+}
+/* BUTTONS */
+.btn-primary{
+    padding: 1.5rem .8rem 1.5rem .8rem;
+    border-radius: 12%;
+    width: 10vw;
+    border: none;
+}
+#color-note{
+    background: #1DD8EE;
+}
+#color-note:hover{
+    background: #1BE7FF;
+}
+.add-text{
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: .3em;
+    color: black;
+}
+.add-backg{
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary{
+    justify-content: center;
+}
+.card-body{
+    background-color: #fff;
+    text-align: justify;
+}
+body{
+    background: #173152;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: large;
+}
+
+/* app-comp */
+
+app-navbar{
+    width: 22%;
+    margin-left: -.8em;
+    margin-right: -4.5em;
+}
+#home-comp{
+    margin-left: -3.5em;
+}
+/* The button used to open the sidebar */
+.menu-btn{
+    position: sticky;
+}
+.clickBtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #274871;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-left: -.5em;
+  }
+  
+.clickBtn:hover {
+    transition: .5s;
+    background-color: #DCB90A;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
