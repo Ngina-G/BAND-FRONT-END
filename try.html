@@ -1,18 +1,25 @@
-<div class="container-fluid back-g">
-    <div class="row flex-nowrap">
-        <app-navbar class="" *ngIf="show"></app-navbar>
-        <div class="col-md-1 mt-3">
-            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
-        </div>
-
-        <div class="col-7 col-md-8" id="home-comp">
-            <app-home></app-home>
-        </div>
-        <div class="col">
-            <app-taskbarhomepage></app-taskbarhomepage>
-        </div>
-
+<!-- Input -->
+<div class="mb-3 container-sm mt-4">
+    <h1>Add Note</h1>
+    <div class="mb-3 mt-4">
+      <label class="form-label">Title</label>
+      <input maxlength="50" id="title" type="text" class="form-control" required placeholder="Title goes here">
     </div>
-</div>
-<router-outlet></router-outlet>
-<!-- <app-pomodoro></app-pomodoro> -->
+    <div class="mb-3 mx-auto">
+      <label class="form-label">Note</label>
+      <textarea maxlength="500" id="note" class="form-control" id="exampleFormControlTextarea1" required
+        rows="12">
+      </textarea>
+      <select class="form-select mt-3" aria-label="Default select example">
+        <option selected>Choose Category</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <div class="col-auto">
+        <button id="submitBtn" type="submit" onclick="createNewNote()" class="btn btn-primary mb-3 mt-3 px-4">Add</button>
+      </div>
+    </div>
+  
+    <!-- Input End-->
+  
