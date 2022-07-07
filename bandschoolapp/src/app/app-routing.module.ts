@@ -9,6 +9,7 @@ import { AddNoteComponent } from './modules/home/pages/add-note/add-note.compone
 import { AddTaskComponent } from './modules/home/pages/add-task/add-task.component';
 import { CategoryComponent } from './modules/home/pages/category/category.component';
 import { NoteComponent } from './modules/home/pages/note/note.component';
+import { EditProfileComponent } from './modules/home/pages/edit-profile/edit-profile.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'add-task', component: AddTaskComponent},
   {path: 'note', component: NoteComponent},
   {path: 'category', component: CategoryComponent},
+  {path: 'edit-profile', component: EditProfileComponent},
 ];
 
 @NgModule({
