@@ -1,0 +1,136 @@
+/* Content */
+body{
+    margin-top:20px;
+    color: #fff;
+    background: #173152;
+}
+.account-settings .user-profile {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+    margin: 0 0 1rem 0;
+}
+.account-settings .user-profile .user-avatar img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+.account-settings .user-profile h5.user-name {
+    margin: 0 0 0.5rem 0;
+}
+.account-settings .user-profile h6.user-email {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.account-settings .about {
+    margin: 1rem 0 0 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.card {
+    background: #173152;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+.form-control {
+    border: 1px solid #596280;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #274871;
+    color: #bcd0f7;
+}
+
+
+
+.container-fluid{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.card:hover{
+    transition: .4s;
+    box-shadow: 5px 5px 20px #274871;
+}
+.txt{
+    color: #1BE7FF;
+}
+/* BUTTONS */
+.btn-primary{
+    border: none;
+    background: #1BE7FF;
+}
+.btn-primary:hover{
+    transition: .5s;
+    background: #12aabb;
+}
+.btn-secondary{
+    border: none;
+    background: #DCB90A;
+}
+.btn-secondary:hover{
+    transition: .5s;
+    background: #EAC50B;
+}
+.add-text{
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: .3em;
+    color: black;
+}
+.add-backg{
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary{
+    justify-content: center;
+}
+
+
+/* app-comp */
+.back-g{
+    overflow: hidden;
+}
+app-navbar{
+    width: 22%;
+    margin-left: -.8em;
+    margin-right: -4.5em;
+}
+#home-comp{
+    margin-left: -3.5em;
+}
+/* The button used to open the sidebar */
+.menu-btn{
+    position: sticky;
+}
+.clickBtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #173152;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-left: -.5em;
+  }
+  
+.clickBtn:hover {
+    transition: .5s;
+    background-color: #DCB90A;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
