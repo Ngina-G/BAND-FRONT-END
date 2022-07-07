@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditorComponent } from './editor.component';
+import { MarkDownEditorComponent } from './mark-down-editor.component';
 
-describe('EditorComponent', () => {
-  let component: EditorComponent;
-  let fixture: ComponentFixture<EditorComponent>;
+describe('MarkDownEditorComponent', () => {
+  let component: MarkDownEditorComponent;
+  let fixture: ComponentFixture<MarkDownEditorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditorComponent ]
+      declarations: [ MarkDownEditorComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EditorComponent);
+    fixture = TestBed.createComponent(MarkDownEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

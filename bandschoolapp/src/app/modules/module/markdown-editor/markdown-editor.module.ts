@@ -1,30 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EditorComponent } from './editor/editor.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { MarkdownEditorOptions } from './mark-down-editor-options';
+import { MarkDownEditorComponent } from './mark-down-editor/mark-down-editor.component';
 
 @NgModule({
   declarations: [
-    EditorComponent
+    MarkDownEditorComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
   ],
   exports: [
-    EditorComponent
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class MarkdownEditorModule { 
-
-    /**
-   * A static method to provide configuration to the [MarkdownEditorModule].
-   */
-     static forRoot(config: MarkdownEditorOptions) {
-      return {
-        ngModule: MarkdownEditorModule,
-        providers: [{provide: MarkdownEditorOptions, useValue: config}]
-      };
-    }
-}
-
+export class MarkdownEditorModule { }
