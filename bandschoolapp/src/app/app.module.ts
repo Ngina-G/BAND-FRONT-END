@@ -28,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MarkdownEditorModule } from './modules/module/markdown-editor/markdown-editor.module';
 
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
     AllNotesComponent,
     NoteComponent,
     CategoryComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
