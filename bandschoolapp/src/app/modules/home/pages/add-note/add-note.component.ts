@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder, FormControl } from '@angular/forms';
-
+import { MarkDownEditorComponent } from 'src/app/modules/module/markdown-editor/mark-down-editor/mark-down-editor.component';
 
 @Component({
   selector: 'app-add-note',
@@ -20,7 +20,7 @@ export class AddNoteComponent implements OnInit {
   }
 
   get descriptionControl(){
-    return this.form.controls.descriptionControl as FormControl
+    return this.form.controls.description as FormControl
   }
 
 }

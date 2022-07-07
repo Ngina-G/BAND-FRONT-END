@@ -26,6 +26,9 @@ import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomep
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MarkdownEditorModule } from './modules/module/markdown-editor/markdown-editor.module';
+
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +57,8 @@ import { MarkdownEditorModule } from './modules/module/markdown-editor/markdown-
     MarkdownEditorModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {
   constructor() {}
