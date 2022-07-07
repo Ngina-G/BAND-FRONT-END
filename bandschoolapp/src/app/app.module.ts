@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { PomodoroComponent } from './modules/home/pages/pomodoro/pomodoro/pomodoro.component';
@@ -20,15 +16,16 @@ import { AddNoteComponent } from './modules/home/pages/add-note/add-note.compone
 import { AddTaskComponent } from './modules/home/pages/add-task/add-task.component';
 import { NoteComponent } from './modules/home/pages/note/note.component';
 import { CategoryComponent } from './modules/home/pages/category/category.component';
+import { EditProfileComponent } from './modules/home/pages/edit-profile/edit-profile.component';
 
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomepage/taskbarhomepage.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MarkdownEditorModule } from './modules/module/markdown-editor/markdown-editor.module';
+import { AngieApiComponent } from './core/http/angie-api/angie-api.component';
+import { RegisterComponent } from './core/authentication/register/register.component';
+import { LoginComponent } from './core/authentication/login/login.component';
 
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { EditProfileComponent } from './modules/home/pages/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -44,23 +41,20 @@ import { EditProfileComponent } from './modules/home/pages/edit-profile/edit-pro
     NoteComponent,
     CategoryComponent,
     EditProfileComponent,
+    AngieApiComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatCardModule,
-    MatInputModule,
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    MarkdownEditorModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {
   constructor() {}
