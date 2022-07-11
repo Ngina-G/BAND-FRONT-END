@@ -7,7 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
- readonly APIUrl = "https://api-angie.herokuapp.com/notes/";
+ readonly APIUrl = "http://127.0.0.1:8000/notes/";
+ readonly deleteUrl = "http://127.0.0.1:8000/deleteNote/";
+ readonly updateUrl = "http://127.0.0.1:8000/updateNote/"
+
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
   constructor(private http: HttpClient) { }
@@ -20,11 +23,11 @@ export class ApiService {
     return this.http.post(this.APIUrl,val);
   }
 
-  updateNote(val:any){
-    return this.http.put(this.APIUrl,val);
+  updateNote(NoteId,val):Observable<any> {
+    return this.http.put(`${this.updateUrl}${NoteId}/`,val);
   }
 
   deleteNote(val:any){
-    return this.http.delete(this.APIUrl+val);
+    return this.http.delete(this.deleteUrl+val);
   }
 }

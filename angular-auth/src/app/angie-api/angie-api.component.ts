@@ -68,9 +68,9 @@ export class AngieApiComponent implements OnInit {
     this.ActivateAddEditNoteComp=true;
   }
 
-  deleteClick(item){
+  deleteClick(NoteId){
     if(confirm('Are you sure??')){
-      this.service.deleteNote(item.NoteId).subscribe(data=>{
+      this.service.deleteNote(NoteId).subscribe(data=>{
         alert(data.toString());
         this.refreshNoteList();
       })
