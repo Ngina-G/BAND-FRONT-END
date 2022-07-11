@@ -11,6 +11,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { AngieApiComponent } from './angie-api/angie-api.component';
 import { AddEditNotesComponent } from './add-edit-notes/add-edit-notes.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddEditNotesComponent } from './add-edit-notes/add-edit-notes.component
     HomeComponent,
     NavComponent,
     AngieApiComponent,
-    AddEditNotesComponent
+    AddEditNotesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<li *ngFor="let profile of profile |keyvalue">
+<div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <img
+          src="{{profile.value.image}}"
+          alt="twitter"
+        />
+      </div>
+    </div>
+    <div class="name">{{profile.value.username}}</div>
+    <div class="career">{{profile.value.bio}}</div>
+    <hr class="horizon" />
+    <button class="about">About Me</button>
+    <div class="info">
+      <p>Name: {{profile.value.username}}</p>
+      <p>Email:{{profile.value.email}}</p>
+    </div>
+    <p class="flow">Follow Me</p>
+    <div class="social-icons">
+      <a href="??" target="_blank" class="fb"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="??" target="_blank" class="messenger"
+        ><i class="fab fa-facebook-messenger"></i
+      ></a>
+      <a href="??" target="_blank" class="insta"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="??" target="_blank" class="telegram"
+        ><i class="fab fa-telegram-plane"></i
+      ></a>
+      <a href="??" target="_blank" class="email"
+        ><i class="fas fa-envelope"></i
+      ></a>
+    </div>
+  </div>
+</li>

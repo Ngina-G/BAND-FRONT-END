@@ -10,6 +10,8 @@ export class ApiService {
  readonly APIUrl = "http://127.0.0.1:8000/notes/";
  readonly deleteUrl = "http://127.0.0.1:8000/deleteNote/";
  readonly updateUrl = "http://127.0.0.1:8000/updateNote/"
+ readonly profileUrl = "http://127.0.0.1:8000/api/profile/";
+
 
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
@@ -29,5 +31,10 @@ export class ApiService {
 
   deleteNote(val:any){
     return this.http.delete(this.deleteUrl+val);
+  }
+
+  getProfile(id): Observable<any> {
+    return this.http.get(`${this.profileUrl}${id}/` 
+      , {headers: this.httpHeaders});
   }
 }
