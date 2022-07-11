@@ -10,7 +10,7 @@ export class ApiService {
  readonly APIUrl = "http://127.0.0.1:8000/notes/";
  readonly deleteUrl = "http://127.0.0.1:8000/deleteNote/";
  readonly updateUrl = "http://127.0.0.1:8000/updateNote/"
- readonly profileUrl = "http://127.0.0.1:8000/api/profile/";
+ readonly profileUrl = "http://auth-doyo.herokuapp.com/api/profile/";
 
 
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
