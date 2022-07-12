@@ -10,7 +10,9 @@ export class ApiService {
  readonly APIUrl = "http://127.0.0.1:8000/notes/";
  readonly deleteUrl = "http://127.0.0.1:8000/deleteNote/";
  readonly updateUrl = "http://127.0.0.1:8000/updateNote/"
- readonly profileUrl = "http://auth-doyo.herokuapp.com/api/profile/";
+ readonly profileUrl = "http://127.0.0.1:8000/api/profile/";
+ readonly updateProfileUrl = "http://127.0.0.1:8000/updateProfile/";
+
 
 
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
@@ -36,5 +38,8 @@ export class ApiService {
   getProfile(id): Observable<any> {
     return this.http.get(`${this.profileUrl}${id}/` 
       , {headers: this.httpHeaders});
+  }
+  updateProfile(id,val): Observable<any> {
+    return this.http.put(`${this.updateProfileUrl}${id}/`,val, {headers: this.httpHeaders});
   }
 }

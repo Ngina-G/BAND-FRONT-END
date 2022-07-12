@@ -27,7 +27,7 @@ export class AngieApiComponent implements OnInit {
     )
   }
   ngOnInit(): void {
-    this.http.get('http://auth-doyo.herokuapp.com/api/user/', {withCredentials: true}).subscribe(
+    this.http.get('http://127.0.0.1:8000/api/user/', {withCredentials: true}).subscribe(
       (res: any) => {
         this.message = `Hi ${res.username}`;
         Emitters.authEmitter.emit(true);

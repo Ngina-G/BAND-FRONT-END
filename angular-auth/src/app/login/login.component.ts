@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
-    this.http.post('http://auth-doyo.herokuapp.com/api/login/', this.form.getRawValue(), {
+    this.http.post('http://127.0.0.1:8000/api/login/', this.form.getRawValue(), {
       withCredentials: true
     }).subscribe(() => this.router.navigate(['home']));
   }
