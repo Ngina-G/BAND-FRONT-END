@@ -29,6 +29,8 @@ import { MarkdownEditorModule } from './modules/module/markdown-editor/markdown-
 
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { EditProfileComponent } from './modules/home/pages/edit-profile/edit-profile.component';
+import { LiveService } from './live.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,11 +59,13 @@ import { EditProfileComponent } from './modules/home/pages/edit-profile/edit-pro
     ReactiveFormsModule,
     FontAwesomeModule,
     MarkdownEditorModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [LiveService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {
+  
   constructor() {}
  }
