@@ -24,115 +24,110 @@
               <div class="container mt-5 text-center">
 
 
-                <div class="md-form">
-                  <input type="search" placeholder="Search text">
-                </div>
+              
                 <!-- <ul *ngFor="let user of usersArray | filter: searchText"> -->
                 <!-- <li>{{user}}</li> -->
                 <!-- </ul> -->
+
+
+
+                <!-- BUTTONS -->
+                <div class="row">
+                  <div class="col-sm add-backg">
+                    <a href="/all-notes">
+                      <button class="btn btn-primary" id="color-note">
+                        <i style="background: white; color:black; padding: .5em; border-radius:50px"
+                          class="fa-solid fa-plus"></i>
+
+                        <!-- <div class="add-text">Notes</div> -->
+                        <a href="/all-notes" class="text-light" style="text-decoration: none">
+                          <div class="add-text">Notes</div>
+                        </a>
+                      </button>
+                    </a>
+                  </div>
+                  <div class="col-sm add-backg">
+                    <a href="/add-task">
+                      <button class="btn btn-primary text-center" id="color-task">
+                        <i style="background: white; color:black; padding: .5em; border-radius:50px"
+                          class="fa-solid fa-plus"></i>
+
+                        <a href="/add-task" class="text-light" style="text-decoration: none">
+                          <div class="add-text">Task</div>
+                        </a>
+                      </button>
+                    </a>
+                  </div>
+                  <div class="col-sm add-backg">
+                    <a href="/all-categories">
+                      <button class="btn btn-primary" id="color-category">
+                        <i style="background: white; color:black; padding: .5em; border-radius:50px"
+                          class="fa-solid fa-plus"></i>
+
+                        <a href="/all-categories" class="text-light" style="text-decoration: none">
+                          <div class="add-text">Category</div>
+                        </a>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               
 
 
-              <!-- BUTTONS -->
-              <div class="row">
-                <div class="col-sm add-backg">
-                  <a href="/all-notes">
-                    <button class="btn btn-primary" id="color-note">
-                      <i style="background: white; color:black; padding: .5em; border-radius:50px"
-                        class="fa-solid fa-plus"></i>
 
-                      <!-- <div class="add-text">Notes</div> -->
-                      <a href="/all-notes" class="text-light" style="text-decoration: none"><div class="add-text">Notes</div> </a>
-                    </button>
-                  </a>
-                </div>
-                <div class="col-sm add-backg">
-                  <a href="/add-task">
-                    <button class="btn btn-primary text-center" id="color-task">
-                      <i style="background: white; color:black; padding: .5em; border-radius:50px"
-                        class="fa-solid fa-plus"></i>
-                    
-                      <a href="/add-task" class="text-light" style="text-decoration: none"><div class="add-text">Task</div> </a>
-                    </button>
-                  </a>
-                </div>
-                <div class="col-sm add-backg">
-                  <a href="/all-categories">
-                    <button class="btn btn-primary" id="color-category">
-                      <i style="background: white; color:black; padding: .5em; border-radius:50px"
-                        class="fa-solid fa-plus"></i>
-                      
-                      <a href="/all-categories" class="text-light" style="text-decoration: none"><div class="add-text">Category</div> </a>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
+              <!-- NOTES CONTAINER -->
+              <div class="note-cards mt-5">
+                <div class="card note-backg mt-4">
+                  <!-- Ngfor note of notes -->
+                  <div *ngFor="let note of note ">
 
-            <!-- NOTES CONTAINER -->
-            <div class="note-cards mt-5">
-              <div class="card note-backg mt-4">
-                <!-- Ngfor note of notes -->
-                <div class="card-body ">
-                  <span class="card-title d-flex justify-content-between pb-3">
-                    <h4 class="">Lorem Ipsum Dolor</h4>
-                    <h5 style="color:#1DD8EE;">Math</h5>
-                  </span>
-                  <p class="card-text pb-1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit?
-                    Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni
-                    repellat corporis quam ad unde.
-                  </p>
-                  <div class="text-muted"><small>2nd June 2022</small></div>
-                </div>
-              </div>
 
-              <div class="card note-backg mt-4">
-                <!-- Ngfor note of notes -->
-                <div class="card-body ">
-                  <span class="card-title d-flex justify-content-between pb-3">
-                    <h4 class="">Lorem Ipsum Dolor</h4>
-                    <h5 style="color:#1DD8EE;">Science</h5>
-                  </span>
-                  <p class="card-text pb-1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit?
-                    Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni
-                    repellat corporis quam ad unde.
-                  </p>
-                  <div class="text-muted"><small>2nd June 2022</small></div>
-                </div>
-              </div>
 
-              <div class="card note-backg mt-4">
-                <!-- Ngfor note of notes -->
-                <div class="card-body ">
-                  <span class="card-title d-flex justify-content-between pb-3">
-                    <h4 class="">Lorem Ipsum Dolor</h4>
-                    <h5 style="color:#1DD8EE;">Flask</h5>
-                  </span>
-                  <p class="card-text pb-1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit?
-                    Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni
-                    repellat corporis quam ad unde.
-                  </p>
-                  <div class="text-muted"><small>2nd June 2022</small></div>
+                    <div class="card-body ">
+                      <span class="card-title d-flex justify-content-between pb-3">
+
+
+                        <h4 class="">{{note.id}}</h4>
+                        <h5 style="color:#1DD8EE;">{{note.title}}</h5>
+                      </span>
+                      <!-- <p class="card-text pb-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit?
+                        Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni
+                        repellat corporis quam ad unde.
+                      </p> -->
+                      <p>{{ note.notes}}</p>
+                      <div class="text-muted"><small>2nd June 2022</small></div>
+                    </div>
+                  </div>
                 </div>
+
+                <section class="mt-3" *ngIf="errorMessage">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <p class="h3 text-danger">{{ errorMessage }}</p>
+                
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
               </div>
 
             </div>
+            <!-- SIDE PANEL FOR PROFILE & TASKS -->
 
           </div>
-          <!-- SIDE PANEL FOR PROFILE & TASKS -->
 
         </div>
-
+      </body>
     </div>
-    </body>
-  </div>
-  <div class="col">
-    <app-taskbarhomepage></app-taskbarhomepage>
-  </div>
+    <div class="col">
+      <app-taskbarhomepage></app-taskbarhomepage>
+    </div>
 
-</div>
+  </div>
 </div>
 <router-outlet></router-outlet>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LiveService } from 'src/app/live.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,14 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title: string = 'BAND';
-  show = false;
+  show = false;  
+  id: any;
+  completed:any;
   
+  note!: any;
+ error!: any;
+  
+  public errorMessage:string='';
 
 
 
-  constructor() {}
+  constructor(private liveService: LiveService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.liveService.getAllNotes().subscribe((data )=> {
+      this.note = data;
+    }, (error)=> {
+      this.errorMessage=error;
+      // console.log(error);
+    });
+  }
 
 }
 
