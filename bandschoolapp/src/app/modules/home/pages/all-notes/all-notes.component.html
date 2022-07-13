@@ -1,8 +1,8 @@
 <div class="container-fluid back-g">
     <div class="row flex-nowrap">
-        <app-navbar class="" *ngIf="show"></app-navbar>
+        <app-navbar class=""></app-navbar>
         <div class="col-md-1 mt-3">
-            <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
+            <button type="button" id="sidebarCollapse" class="btn clickBtn" >&#9776;</button>    
         </div>
 
         <div class="col-7 col-md-10" id="home-comp">
@@ -22,51 +22,23 @@
                             </div>
                 
                 <!-- NOTES CONTAINER -->
-                            <div class="note-cards mt-5">
+                            <div class="note-cards mt-5" *ngFor="let note of note">
+                            
                                 <a href="/note">
                                     <div class="card note-backg mt-4">
                                         <!-- Ngfor note of notes -->
                                         <div class="card-body ">
                                             <span class="card-title d-flex justify-content-between pb-3">
-                                                <h4 class="">Lorem Ipsum Dolor</h4>
+                                                <h4 class="">{{note.title}}</h4>
                                             </span>
                                             <p class="card-text pb-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
+                                                {{note.notes}}
                                             </p>
-                                            <div class="text-muted"><small>2nd June 2022</small></div>
+                                            <div class="text-muted"><small>{{note.date|date}}</small></div>
                                         </div>
                                     </div>
                                 </a>
                         
-                                <a href="/note">
-                                    <div class="card note-backg mt-4">
-                                        <!-- Ngfor note of notes -->
-                                        <div class="card-body ">
-                                            <span class="card-title d-flex justify-content-between pb-3">
-                                                <h4 class="">Lorem Ipsum Dolor</h4>
-                                            </span>
-                                            <p class="card-text pb-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
-                                            </p>
-                                            <div class="text-muted"><small>2nd June 2022</small></div>
-                                        </div>
-                                    </div>
-                                </a>
-                        
-                                <a href="/note">
-                                    <div class="card note-backg mt-4">
-                                        <!-- Ngfor note of notes -->
-                                        <div class="card-body ">
-                                            <span class="card-title d-flex justify-content-between pb-3">
-                                                <h4 class="">Lorem Ipsum Dolor</h4>
-                                            </span>
-                                            <p class="card-text pb-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit? Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni repellat corporis quam ad unde.
-                                            </p>
-                                            <div class="text-muted"><small>2nd June 2022</small></div>
-                                        </div>
-                                    </div>
-                                </a>
                         
                             </div>
                         

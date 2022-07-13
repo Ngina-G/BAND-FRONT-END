@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Emitters } from 'src/app/core/emitters/emitters';
 import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
@@ -8,9 +10,9 @@ import { ApiService } from 'src/app/core/services/api.service';
 })
 export class AddNoteComponent implements OnInit {
 
-  constructor(private service:ApiService) { }
+  constructor(private service:ApiService,private router:Router) { }
 
-  show = false;
+  show = true;
 
   @Input() note:any=[];
   NoteId!:string;
@@ -20,6 +22,8 @@ export class AddNoteComponent implements OnInit {
     this.NoteId=this.note.NoteId;
     this.title=this.note.title;
     this.notes=this.note.notes;
+    Emitters.authEmitter.emit(true);
+
   }
 
   addNotes(){
@@ -28,6 +32,7 @@ export class AddNoteComponent implements OnInit {
                 notes:this.notes,};
     this.service.addNote(val).subscribe(res=>{
       alert(res.toString());
+      this.router.navigate(['all-notes'])
     });
   }
 

@@ -11,20 +11,15 @@ import { LiveService } from 'src/app/shared/live.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  show = false;
+  show = true;
   note:any=[];
-  id: any;
+
   completed:any;
   error!: any;
-  
-  profile:any=[]
-  user_id!:string;
-  bio!:string;
-  email!:string;
-  image:any;
-  username!:string;
-  name!:string;
 
+  profile:any=[]
+  
+ 
   public errorMessage:string='';
   message=''
 
@@ -68,6 +63,7 @@ export class HomeComponent implements OnInit {
     //     },
   
     //   );
+  
   }
 
 
@@ -79,6 +75,7 @@ export class HomeComponent implements OnInit {
   titleFilter:string="";
   notesFilter:string="";
   NotesWithoutFilter:any=[];
+  
 
 
   addClick(){
@@ -94,9 +91,25 @@ export class HomeComponent implements OnInit {
 
   editClick(item:any){
     this.note=item;
+    console.log(item);
+  
     this.ModalTitle="Edit Notes";
     this.ActivateAddEditNoteComp=true;
   }
+
+  // update():void{
+  //  var val={NoteId:this.NoteId,
+  //   title:this.title,
+  //   notes:this.notes
+
+  //  }
+  
+  // console.log(this.note.NoteId);
+  
+  //   this.service.updateNote(this.note.NoteId,val).subscribe(res=>{
+  //   alert(res.toString());
+  //   });
+  // }
 
   deleteClick(NoteId:any){
     if(confirm('Are you sure??')){
