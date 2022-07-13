@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Emitters } from 'src/app/core/emitters/emitters';
 import { ApiService } from 'src/app/core/services/api.service';
+import { LiveService } from 'src/app/shared/live.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   note:any=[];
 
   message=''
-  constructor(private service: ApiService,private http:HttpClient) {
+  constructor(private service: ApiService,private http:HttpClient,private liveService: LiveService) {
     this.getNotes(); 
   }
   getNotes =  () => {
@@ -27,6 +28,14 @@ export class HomeComponent implements OnInit {
       }
     )
   }
+
+  id: any;
+  completed:any;
+ error!: any;
+  
+  public errorMessage:string='';
+
+
   ngOnInit(): void {
     this.http.get('http://127.0.0.1:8000/api/user/', {withCredentials: true}).subscribe(
       (res: any) => {
@@ -39,6 +48,12 @@ export class HomeComponent implements OnInit {
       }
     );
     this.refreshNoteList();
+    this.liveService.getAllNotes().subscribe((data )=> {
+      this.note = data;
+    }, (error)=> {
+      this.errorMessage=error;
+      // console.log(error);
+    });
   }
 
 
