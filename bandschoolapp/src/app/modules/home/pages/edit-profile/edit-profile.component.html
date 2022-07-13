@@ -14,12 +14,12 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="account-settings">
-                                    <div class="user-profile">
+                                    <div class="user-profile" *ngFor="let profile of profile">
                                         <div class="user-avatar mt-5">
                                             <img src="../../../../../assets/media/images/vitae-london-8BOZ2TxO2lQ-unsplash.jpg" alt="Maxwell Admin">
                                         </div>
-                                        <h5 class="user-name txt">Jane Doe</h5>
-                                        <h6 class="user-email">jane123@gmail.com</h6>
+                                        <h5 class="user-name txt">{{profile.value.username}}</h5>
+                                        <h6 class="user-email">{{profile.value.email}}</h6>
                                     </div>
                                 </div>
                             </div>

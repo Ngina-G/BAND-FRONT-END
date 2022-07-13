@@ -17,6 +17,14 @@ export class HomeComponent implements OnInit {
   completed:any;
   error!: any;
   
+  profile:any=[]
+  user_id!:string;
+  bio!:string;
+  email!:string;
+  image:any;
+  username!:string;
+  name!:string;
+
   public errorMessage:string='';
   message=''
 
@@ -53,6 +61,19 @@ export class HomeComponent implements OnInit {
       this.errorMessage=error;
       // console.log(error);
     });
+    this.http.get('http://127.0.0.1:8000/api/user/', {withCredentials: true}).subscribe(
+        (res: any) => {
+          this.service.getProfile(res.id).subscribe(
+            data => {
+              this.profile = data;
+            },
+            error => {
+              console.log(error);
+            }
+          )
+        },
+  
+      );
   }
 
 

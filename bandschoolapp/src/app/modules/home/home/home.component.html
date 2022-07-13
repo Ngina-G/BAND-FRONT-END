@@ -8,7 +8,7 @@
         <div class="col-7 col-md-8" id="home-comp">
             <body>
                 <div id="home-container" class="container">
-                    <h1 style="font-weight: 600;">Welcome back, Jane!</h1>
+                    <h1 style="font-weight: 600;">Welcome back, </h1><h1>Welcome back, {{profile.value.username}}</h1>
                     <small class="text-secondary">20th June,Sunday</small>
                     
                     <div class="row d-flex justify-content-end w-100">
@@ -66,47 +66,39 @@
 
                 
                 <!-- NOTES CONTAINER -->
-                        <!-- <ul *ngFor="let note of note">
-                            <div class="note-cards mt-5">
-                                <li>
-                                    <div class="card note-backg mt-4">
+                            <!-- <div class="note-cards mt-5">
+                                    <div class="card note-backg mt-4" *ngFor="let note of note">
                                         <div class="card-body ">
+
                                             <span class="card-title d-flex justify-content-between pb-3">
                                                 <h4 class="">
                                                     {{note.value.NoteId}}
                                                     {{note.value.title}}</h4>
                                                 <h5 style="color:#1DD8EE;">Math</h5>
                                             </span>
+
                                             <p class="card-text pb-1">{{note.value.notes}}</p>
-                                            <div class="text-muted"><small>2nd June 2022</small></div>
-                                            <footer><button type="button" class="btn btn-light mr-1"
-                                                data-toggle="modal" data-target="#exampleModal"
-                                (click)="editClick(note.value)"
-                                data-backdrop="static" data-keyboard="false"
-                                                >
-                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                                                </svg>
-                                               Edit</button>
-                                               <button type="button" class="btn btn-light mr-1"
-                                               (click)="deleteClick(note.value.NoteId)"
-                                               >
-                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                   <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-                                                 </svg>
-                                               </button>
-                                              
-                                              </footer>
+
+                                            <footer class="d-flex justify-content-end">
+                                                <div class="col">
+                                                    <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" href="#exampleModalToggle"  (click)="editClick(note.value)" data-backdrop="static" data-keyboard="false">
+                                                        <i class="fa-solid fa-pen-to-square"></i>Edit
+                                                    </button>
+                                                   <button type="button" class="btn btn-light mr-1" (click)="deleteClick(note.id)">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                   </button>
+                                                </div>
+                                                
+                                                <small class="text-muted col">2nd June 2022</small>
+                                            </footer>
+
                                         </div>
                                     </div>
     
-                                </li>
-                            </div>
-                        </ul> -->
+                            </div> -->
+
                         <div class="note-cards mt-5">
                             <div class="card note-backg mt-4" *ngFor="let note of note">
-                              <!-- Ngfor note of notes -->
                                 <div class="card-body" >
                                   <span class="card-title d-flex justify-content-between pb-3">
                                     <h4 class="">{{note.title}}</h4>
@@ -141,8 +133,6 @@
                             </section>
                         
                         </div>
-                <!-- SIDE PANEL FOR PROFILE & TASKS -->
-                        
                     </div>
                 
                 </div>
