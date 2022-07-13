@@ -12,7 +12,7 @@ export class AddNoteComponent implements OnInit {
 
   show = false;
 
-  @Input() note:any;
+  @Input() note:any=[];
   NoteId!:string;
   title!:string;
   notes!:string;
@@ -31,11 +31,11 @@ export class AddNoteComponent implements OnInit {
     });
   }
 
-  updateNotes(){
+  updateNotes():void{
     var val = {NoteId:this.NoteId,
               title:this.title,
               notes:this.notes,};
-    this.service.updateNote(val).subscribe(res=>{
+    this.service.updateNote(this.NoteId,val).subscribe(res=>{
     alert(res.toString());
     });
   }

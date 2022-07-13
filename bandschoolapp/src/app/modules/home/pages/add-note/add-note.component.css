@@ -9,11 +9,11 @@ a{
     box-shadow: 5px 5px 20px #DCB90A;
 }
 /* BUTTONS */
-.btn-primary{
+.btn-add{
     border: none;
     background: #DCB90A;
 }
-.btn-primary:hover{
+.btn-add:hover{
     transition: .5s;
     background: #1BE7FF;
 }

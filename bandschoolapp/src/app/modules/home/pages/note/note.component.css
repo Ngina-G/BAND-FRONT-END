@@ -25,6 +25,15 @@
     display: flex;
     flex-direction: column;
 }
+.btn-update{
+    border: none;
+    background: #DCB90A;
+    border-radius: 12px;
+}
+.btn-update:hover{
+    transition: .5s;
+    background: #1BE7FF;
+}
 .btn-primary{
     justify-content: center;
 }

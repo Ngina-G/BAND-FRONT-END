@@ -27,7 +27,7 @@ export class AngieApiComponent implements OnInit {
     )
   }
   ngOnInit(): void {
-    this.http.get('https://auth-doyo.herokuapp.com/api/user/', {withCredentials: true}).subscribe(
+    this.http.get('http://127.0.0.1:8000/api/user/', {withCredentials: true}).subscribe(
       (res: any) => {
         this.message = `Hi ${res.username}`;
         Emitters.authEmitter.emit(true);
@@ -40,8 +40,8 @@ export class AngieApiComponent implements OnInit {
     this.refreshNoteList();
   }
 
-  
-  ModalTitle:string="";
+
+  ModalTitle!:string;
   ActivateAddEditNoteComp:boolean=false;
 
 
@@ -68,9 +68,9 @@ export class AngieApiComponent implements OnInit {
     this.ActivateAddEditNoteComp=true;
   }
 
-  deleteClick(item: any){
+  deleteClick(NoteId:any){
     if(confirm('Are you sure??')){
-      this.service.deleteNote(item.NoteId).subscribe(data=>{
+      this.service.deleteNote(NoteId).subscribe(data=>{
         alert(data.toString());
         this.refreshNoteList();
       })
