@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { PomodoroComponent } from './modules/home/pages/pomodoro/pomodoro/pomodoro.component';
@@ -18,14 +18,14 @@ import { NoteComponent } from './modules/home/pages/note/note.component';
 import { CategoryComponent } from './modules/home/pages/category/category.component';
 import { EditProfileComponent } from './modules/home/pages/edit-profile/edit-profile.component';
 
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomepage/taskbarhomepage.component';
-
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AngieApiComponent } from './core/http/angie-api/angie-api.component';
 import { RegisterComponent } from './core/authentication/register/register.component';
 import { LoginComponent } from './core/authentication/login/login.component';
 
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { TaskbarhomepageComponent } from './modules/home/components/taskbarhomepage/taskbarhomepage.component';
+import { ApiService } from './core/services/api.service';
+import { LiveService } from './shared/live.service';
 
 @NgModule({
   declarations: [
