@@ -20,7 +20,7 @@ ActivateAddEditNoteComp:boolean=false;
   constructor(private http:HttpClient,private service:ApiService) { }
 
   ngOnInit(): void {
-    this.http.get('http://127.0.0.1:8000/api/user/', {withCredentials: true}).subscribe(
+    this.http.get(' https://auth-doyo.herokuapp.com/api/user/', {withCredentials: true}).subscribe(
       (res: any) => {
         this.service.getProfile(res.id).subscribe(
           data => {
