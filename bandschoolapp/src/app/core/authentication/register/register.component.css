@@ -21,17 +21,17 @@ body {
     border-radius: 15px;
 }
 
-.wrapper .h5 {
-    color: #ddd;
+.wrapper .h2 {
+    color: #1BE7FF;
 }
 
 .wrapper .form-group {
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #DCB90A; */
     margin-bottom: 1.5rem;
 }
 
 .wrapper .form-group:hover {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #DCB90A;
 }
 
 .wrapper .form-group .icon {
@@ -52,10 +52,6 @@ body {
 
 .wrapper .form-group input:focus::placeholder {
     opacity: 0;
-}
-
-.wrapper .form-group .fa-phone {
-    transform: rotate(90deg);
 }
 
 
@@ -92,33 +88,9 @@ body {
     border-radius: 2px
 }
 
-.wrapper .option input:checked~.checkmark {
-    transition: 300ms ease-in-out all
-}
-
-.wrapper .checkmark:after {
-    content: "\2713";
-    position: absolute;
-    display: none;
-    font-weight: 600;
-    color: #FFF;
-    font-size: 0.9rem;
-}
-
-.wrapper .option input:checked~.checkmark:after {
-    display: block
-}
-
-.wrapper .option .checkmark:after {
-    left: 2px;
-    top: -4px;
-    width: 5px;
-    height: 10px
-}
-
 .wrapper .btn.btn-primary {
     position: relative;
-    color: #eee;
+    color: #1BE7FF;
     padding: 0.3rem 1rem;
     border-radius: 20px;
     border: 1px solid #ddd;
@@ -140,7 +112,7 @@ body {
 
 .wrapper .terms a {
     text-decoration: none;
-    color: #eee;
+    color: #DCB90A;
 }
 
 .wrapper .terms a:hover {
@@ -184,7 +156,7 @@ body {
     text-decoration: none;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #DCB90A;
     border-radius: 6px;
     box-shadow: 0 5px 30px #004683e0;
     transition: 0.5s;
@@ -203,7 +175,7 @@ body {
     left: 0;
     width: 25px;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(243, 198, 0, 0.6);
     transform: skew(45deg) translateX(130px);
     transition: .5s;
     opacity: 0;

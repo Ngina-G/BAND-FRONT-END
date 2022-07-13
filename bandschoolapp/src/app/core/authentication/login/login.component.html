@@ -1,27 +1,32 @@
-<div class="wrapper">
-    <form [formGroup]="form" (submit)="submit()">
-        <div class="h5 font-weight-bold text-center mb-3">Please sign in</div>
-        <div class="form-group d-flex align-items-center">
-            <div class="icon"><span class="far fa-user"></span></div>
-            <input formControlName="email" type="email" class="form-control" placeholder="Email" required>
-        </div>
-        <div class="form-group d-flex align-items-center">
-            <div class="icon"><span class="fas fa-key"></span></div>
-            <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
-            <div class="icon btn"><span class="fas fa-eye-slash"></span></div>
-        </div>
-        <div class="mb-2">
-            <label class="option">Remember me
-                <input type="checkbox" checked>
-                <span class="checkmark"></span>
-            </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
-        <div class="terms mb-2">
-            Don't have an account? <a href="/register">Sign Up</a>
-        </div>
-    </form>
-  </div>
+<body class="wrapper px-5">
+    <!-- LOGO -->
+    <a href="/" class="d-flex align-items-center justify-content-center mb-md-0 me-md-auto text-white text-decoration-none">
+        <span class="fs-5 d-none d-sm-inline mt-4">
+            <div style="display: flex;color: #fff;">
+                <div id="logo" style="background-color: #1DD8EE;width:50px;height:50px;border: 7px solid #DCB90A; margin-right: .5em;"></div>
+                <p style="font-size: 42px;margin-top:-.08em;font-family: 'Poller One', cursive;">BAND</p>
+              </div>
+        </span>
+    </a>
+    <div class="wrapper">
+        <form [formGroup]="form" (submit)="submit()">
+            <div class="h2 font-weight-bold text-center mb-4">Please sign in</div>
+            <div class="form-group d-flex align-items-center">
+                <div class="icon"><span class="far fa-user"></span></div>
+                <input formControlName="email" type="email" class="form-control mx-2" placeholder="Email" required>
+            </div>
+            <div class="form-group d-flex align-items-center ">
+                <div class="icon"><span class="fas fa-key"></span></div>
+                <input formControlName="password" type="password" class="form-control mx-2" placeholder="Password" required>
+                <div class="icon btn"><span class="fas fa-eye-slash"></span></div>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Log in</button>
+            <div class="terms mb-2">
+                Don't have an account? <a href="/register">Sign Up</a>
+            </div>
+        </form>
+      </div>
+</body>
   
   <!-- <form [formGroup]="form" (submit)="submit()">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
