@@ -6,12 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
-  readonly APIUrl = "http://127.0.0.1:8000/notes/";
-  readonly deleteUrl = "http://127.0.0.1:8000/deleteNote/";
-  readonly updateUrl = "http://127.0.0.1:8000/updateNote/"
-  readonly profileUrl = "http://127.0.0.1:8000/api/profile/";
-  readonly updateProfileUrl = "http://127.0.0.1:8000/updateProfile/";
+  readonly APIUrl = " https://auth-doyo.herokuapp.com/notes/";
+  readonly deleteUrl = " https://auth-doyo.herokuapp.com/deleteNote/";
+  readonly updateUrl = " https://auth-doyo.herokuapp.com/updateNote/"
+  readonly profileUrl = " https://auth-doyo.herokuapp.com/api/profile/";
+  readonly updateProfileUrl = " https://auth-doyo.herokuapp.com//updateProfile/";
  
  
  
