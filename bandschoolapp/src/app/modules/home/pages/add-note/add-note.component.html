@@ -8,17 +8,16 @@
 
     <!-- FORM -->
       <div class="col-7 col-md-10" id="home-comp">
-        <div class="mb-3 container-sm mt-4">
+        <div class="mb-3 container-sm mt-4 form-froup">
 
           <h1>Add Note</h1>
           <div class="mb-3 mt-4">
             <label class="form-label">Title</label>
-            <input maxlength="50" id="title" type="text" class="form-control" required placeholder="Title goes here">
+            <input maxlength="50" id="title" type="text" class="form-control" required placeholder="Title goes here" [(ngModel)]="title">
           </div>
           <div class="mb-3 mx-auto">
             <label class="form-label">Note</label>
-            <textarea id="note" class="form-control" id="exampleFormControlTextarea1" required
-              rows="12">
+            <textarea id="note" class="form-control" id="exampleFormControlTextarea1" required rows="12" [(ngModel)]="notes">
             </textarea>
             <select class="form-select mt-3" aria-label="Default select example">
               <option selected>Choose Category</option>
@@ -27,7 +26,7 @@
               <option value="3">Three</option>
             </select>
             <div class="col-auto">
-              <button id="submitBtn" type="submit" onclick="createNewNote()" class="btn btn-primary mb-3 mt-3 px-4">Add</button>
+              <button id="submitBtn" type="submit" (click)="addNotes()" *ngIf="note.NoteId==0" class="btn btn-primary mb-3 mt-3 px-4">Add</button>
             </div>
 
         </div>

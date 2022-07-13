@@ -1,0 +1,51 @@
+<body class="wrapper px-5">
+    <!-- LOGO -->
+    <a href="/" class="d-flex align-items-center justify-content-center mb-md-0 me-md-auto text-white text-decoration-none">
+        <span class="fs-5 d-none d-sm-inline mt-4">
+            <div style="display: flex;color: #fff;">
+                <div id="logo" style="background-color: #1DD8EE;width:50px;height:50px;border: 7px solid #DCB90A; margin-right: .5em;"></div>
+                <p style="font-size: 42px;margin-top:-.08em;font-family: 'Poller One', cursive;">BAND</p>
+              </div>
+        </span>
+    </a>
+
+    <div class="wrapper">
+        <form [formGroup]="form" (submit)="submit()">
+            <div class="h2 font-weight-bold text-center mb-4">Sign up</div>
+            <div class="form-group d-flex align-items-center">
+                <div class="icon"><span class="far fa-user"></span></div>
+                <input formControlName="username" class="form-control mx-2" placeholder="Name" required>
+            </div>
+            <div class="form-group d-flex align-items-center">
+                <div class="icon"><span class="far fa-envelope"></span></div>
+                <input formControlName="email" type="email" class="form-control mx-2" placeholder="Email" required>
+            </div>
+            <div class="form-group d-flex align-items-center">
+                <div class="icon"><span class="fas fa-key"></span></div>
+                <input formControlName="password" type="password" class="form-control mx-2" placeholder="Password" required>
+                <div class="icon btn"><span class="fas fa-eye-slash"></span></div>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+            <div class="terms mb-2 mt-4">
+                <small>
+                    By clicking <a href="#" class="sign-btn">"Signup"</a> you acknowledge that you have read the
+                    Privacy Policy and agree to the Terms of Service.
+                </small>
+            </div>
+        </form>
+      </div>
+</body>
+  
+  
+  <!-- <form [formGroup]="form" (submit)="submit()">
+    <h1 class="h3 mb-3 fw-normal">Please register</h1>
+  
+    <input formControlName="username" class="form-control" placeholder="Name" required>
+  
+  
+    <input formControlName="email" type="email" class="form-control" placeholder="Email" required>
+  
+    <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
+  
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+  </form> -->
