@@ -13,11 +13,17 @@ import { LiveService } from 'src/app/shared/live.service';
 export class HomeComponent implements OnInit {
   show = false;
   note:any=[];
-
+  id: any;
+  completed:any;
+  error!: any;
+  
+  public errorMessage:string='';
   message=''
+
   constructor(private service: ApiService,private http:HttpClient,private liveService: LiveService) {
     this.getNotes(); 
   }
+  
   getNotes =  () => {
     this.service.getAllNotes().subscribe(
       data => {
@@ -28,13 +34,6 @@ export class HomeComponent implements OnInit {
       }
     )
   }
-
-  id: any;
-  completed:any;
- error!: any;
-  
-  public errorMessage:string='';
-
 
   ngOnInit(): void {
     this.http.get('http://127.0.0.1:8000/api/user/', {withCredentials: true}).subscribe(

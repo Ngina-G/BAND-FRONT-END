@@ -45,24 +45,24 @@
                             </div>
 
                               <!-- Modal -->
-  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
-          <button type="button" class="close" 
-          data-dismiss="modal" aria-label="Close"
-          (click)="closeClick()" >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <app-add-note [note]="note" *ngIf="ActivateAddEditNoteComp">
-            </app-add-note>
-        </div>
-      </div>
-    </div>
-  </div> -->
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-fullscreen" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+                        <button type="button" class="close" 
+                        data-dismiss="modal" aria-label="Close"
+                        (click)="closeClick()" >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <app-add-note [note]="note" *ngIf="ActivateAddEditNoteComp">
+                            </app-add-note>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 
                 
                 <!-- NOTES CONTAINER -->
@@ -105,27 +105,27 @@
                             </div>
                         </ul> -->
                         <div class="note-cards mt-5">
-                            <div class="card note-backg mt-4">
+                            <div class="card note-backg mt-4" *ngFor="let note of note">
                               <!-- Ngfor note of notes -->
-                              <div *ngFor="let note of note ">
-            
-            
-            
-                                <div class="card-body ">
+                                <div class="card-body" >
                                   <span class="card-title d-flex justify-content-between pb-3">
-            
-            
-                                    <h4 class="">{{note.id}}</h4>
-                                    <h5 style="color:#1DD8EE;">{{note.title}}</h5>
+                                    <h4 class="">{{note.title}}</h4>
+                                    <h5 style="color:#1DD8EE;">{{note.id}}</h5>
                                   </span>
-                                  <!-- <p class="card-text pb-1">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat in odio aliquid suscipit?
-                                    Accusantium doloremque praesentium voluptatem aut eos temporibus facere incidunt, sint magni
-                                    repellat corporis quam ad unde.
-                                  </p> -->
                                   <p>{{ note.notes}}</p>
-                                  <div class="text-muted"><small>2nd June 2022</small></div>
+                                  <footer class="d-flex justify-content-end">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" href="#exampleModalToggle"  (click)="editClick(note.value)" data-backdrop="static" data-keyboard="false">
+                                            <i class="fa-solid fa-pen-to-square"></i>Edit
+                                        </button>
+                                       <button type="button" class="btn btn-light mr-1" (click)="deleteClick(note.id)">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                       </button>
+                                    </div>
+                                    <small class="text-muted col">2nd June 2022</small>
+                                </footer>
                                 </div>
+                                
                               </div>
                             </div>
             
