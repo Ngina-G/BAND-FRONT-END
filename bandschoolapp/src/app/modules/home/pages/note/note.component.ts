@@ -1,5 +1,8 @@
 // import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Emitters } from 'src/app/core/emitters/emitters';
 import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
@@ -8,35 +11,34 @@ import { ApiService } from 'src/app/core/services/api.service';
   styleUrls: ['./note.component.css']
 })
 export class NoteComponent implements OnInit {
-  show = false;
-  constructor(private service:ApiService) { }
-
-  @Input() note:any=[];
-  NoteId!:string;
-  title!:string;
-  notes!:string;
+  constructor(private router:Router,private service:ApiService,private http:HttpClient) { }
+  oneNote:any=[]
+  show=false
+href:string;
+message='';
   ngOnInit(): void {
-    this.NoteId=this.note.NoteId;
-    this.title=this.note.title;
-    this.notes=this.note.notes;
+    this.href = this.router.url;
+    console.log(this.router.url);
+    const url=String(this.router.url).slice(-2)
+    console.log(url);
+  this.http.get('https://auth-doyo.herokuapp.com/api/user/', {withCredentials: true}).subscribe(
+      (res: any) => {
+        this.message =  `Welcome Back ${res.username}`;
+        Emitters.authEmitter.emit(true);
+      },
+      err => {
+        this.message = 'You are not logged in';
+        Emitters.authEmitter.emit(false);
+      }
+    );
+this.service.getOneNote(url).subscribe(
+  data => {
+    this.oneNote = data;
+  },
+  error => {
+    console.log(error);
   }
-
-  addNotes(){
-    var val = {NoteId:this.NoteId,
-                title:this.title,
-                notes:this.notes,};
-    this.service.addNote(val).subscribe(res=>{
-      alert(res.toString());
-    });
-  }
-
-  updateNotes():void{
-    var val = {NoteId:this.NoteId,
-              title:this.title,
-              notes:this.notes,};
-    this.service.updateNote(this.NoteId,val).subscribe(res=>{
-    alert(res.toString());
-    });
+  );
   }
 
 }

@@ -1,3 +1,7 @@
+.strikethrough:checked + span{
+    text-decoration:line-through
+  }
+
 /* SIDE PANEL */
 #tasks-container{
     background: #fff;
@@ -27,4 +31,8 @@
 }
 #task-card{
     border: none;
+}
+.btn-add{
+    background: #DCB90A;
+    color: #fff;
 }

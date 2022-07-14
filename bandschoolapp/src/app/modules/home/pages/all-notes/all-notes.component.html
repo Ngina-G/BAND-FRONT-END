@@ -20,24 +20,54 @@
                                         </a>
                                     </div>
                             </div>
+                            <div class="modal fade" id="exampleModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <div class="modal-dialog modal-fullscreen" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit Note</h5>
+                                    <button type="button" class="close" 
+                                    data-dismiss="modal" aria-label="Close"
+                                    (click)="closeClick()" >
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <app-edit-note [note]="note" *ngIf=" ActivateAddEditNoteComp"></app-edit-note>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                 
                 <!-- NOTES CONTAINER -->
-                            <div class="note-cards mt-5" *ngFor="let note of note">
+                            <div class="note-cards mt-5" *ngFor="let note of note |keyvalue">
                             
-                                <a href="/note">
+                              
                                     <div class="card note-backg mt-4">
                                         <!-- Ngfor note of notes -->
                                         <div class="card-body ">
+                                            <a href="/note/{{note.value.NoteId}}">
                                             <span class="card-title d-flex justify-content-between pb-3">
-                                                <h4 class="">{{note.title}}</h4>
+                                                <h4 class="">{{note.value.title}}</h4>
                                             </span>
                                             <p class="card-text pb-1">
-                                                {{note.notes}}
+                                                {{note.value.notes}}
                                             </p>
-                                            <div class="text-muted"><small>{{note.date|date}}</small></div>
+                                            </a>
+                                            <footer class="d-flex justify-content-end">
+                                                <div class="col">
+                                                    <button type="button" class="btn btn-light mr-1" data-toggle="modal" data-target="#exampleModal"  (click)="editClick(note.value)" data-backdrop="static" data-keyboard="false">
+                                                        <i class="fa-solid fa-pen-to-square"></i>Edit
+                                                    </button>
+                                                   <button type="button" class="btn btn-light mr-1" (click)="deleteClick(note.value.NoteId)">
+                                                        <i class="fa-solid fa-trash-can"></i>Delete
+                                                   </button>
+                                                </div>
+                                                <div class="text-muted"><small>{{note.date|date}}</small></div>
+                                            </footer>
+                                                    
                                         </div>
                                     </div>
-                                </a>
+                            
                         
                         
                             </div>

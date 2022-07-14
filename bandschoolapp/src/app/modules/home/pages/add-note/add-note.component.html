@@ -7,7 +7,8 @@
       </div>
 
     <!-- FORM -->
-      <div class="col-7 col-md-10" id="home-comp">
+    <h1 style="margin-top:10%; margin-left:20%" *ngIf="!authenticated"> Login to Add Note</h1>
+      <div class="col-7 col-md-10" id="home-comp" *ngIf="authenticated">
         <div class="mb-3 container-sm mt-4 form-froup">
 
           <h1>Add Note</h1>

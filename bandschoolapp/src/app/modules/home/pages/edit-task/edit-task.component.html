@@ -1,0 +1,11 @@
+<div class="form-froup row">
+              
+    <label class="col-sm-2 col-form-label">Task</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" [(ngModel)]="tasks"
+        placeholder="Enter Department Name">
+    </div>
+</div>
+<button type="submit" (click)="updateTask()"  class="btn btn-primary">
+    Update
+</button>

@@ -1,11 +1,11 @@
 <div class="container-fluid back-g">
     <div class="row flex-nowrap">
         <app-navbar class="" *ngIf="show"></app-navbar>
-        <div class="col-md-1 mt-3">
-            <button type="button" id="sidebarCollapse" class="btn clickBtn" >&#9776;</button>    
+        <div class="col mt-3">
+            <!-- <button type="button" id="sidebarCollapse" class="btn clickBtn" >&#9776;</button>     -->
         </div>
 
-        <div class="col-7 col-md-8" id="home-comp">
+        <div class="col-7 col-md-7" id="home-comp">
             <body>
                 <div id="home-container" class="container">
                     <h1 style="font-weight: 600;">{{message}} </h1><h1></h1>
@@ -57,7 +57,7 @@
                         </button>
                         </div>
                         <div class="modal-body">
-                            <app-edit-note>[note]="note" *ngIf=" ActivateAddEditNoteComp"</app-edit-note>
+                            <app-edit-note [note]="note" *ngIf=" ActivateAddEditNoteComp"></app-edit-note>
                         </div>
                     </div>
                     </div>
@@ -95,14 +95,17 @@
                                     </div>
     
                             </div> -->
-
-                        <div class="note-cards mt-5">
+<h2 style="margin-top: 20%; text-align:center" *ngIf="!authenticated">Login to get started</h2>
+                    <div class="note-cards mt-5" *ngIf="authenticated">
+                        
                             <li class="card note-backg mt-4" *ngFor="let note of note |keyvalue">
                                 <div class="card-body" >
+                                    <a href="/note" style="text-decoration: none; color: black;">
                                   <span class="card-title d-flex justify-content-between pb-3">
                                     <h4 class="">{{note.value.title}}</h4>
                                   </span>
                                   <p>{{ note.value.notes}}</p>
+                                  </a>
                                   <footer class="d-flex justify-content-end">
                                     <div class="col">
                                         <button type="button" class="btn btn-light mr-1" data-toggle="modal" data-target="#exampleModal"  (click)="editClick(note.value)" data-backdrop="static" data-keyboard="false">
@@ -112,12 +115,13 @@
                                             <i class="fa-solid fa-trash-can"></i>Delete
                                        </button>
                                     </div>
-                                    <small class="text-muted col">2nd June 2022</small>
+                                    <!-- <div class="text-muted"><small>{{note.date|date}}</small></div> -->
                                 </footer>
                                 </div>
                                 
                             </li>
-                            </div>
+                        
+                    </div>
             
                             <section class="mt-3" *ngIf="errorMessage">
                               <div class="container">
@@ -136,8 +140,8 @@
                 </div>
                 </body>
         </div>
-        <div class="col">
-            <app-taskbarhomepage></app-taskbarhomepage>
+        <div class="col-md-3" >
+            <app-taskbarhomepage *ngIf="authenticated"></app-taskbarhomepage>
         </div>
 
     </div>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from 'src/app/core/services/api.service';
 })
 export class EditNoteComponent implements OnInit {
 
-  constructor(private service:ApiService) { }
+  constructor(private service:ApiService,private router: Router) { }
   @Input() note:any=[];
   NoteId:string;
   title:string;

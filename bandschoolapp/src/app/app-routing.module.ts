@@ -14,14 +14,14 @@ import { LoginComponent } from './core/authentication/login/login.component';
 import { RegisterComponent } from './core/authentication/register/register.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'home'},
+  {path: '', pathMatch: 'full', redirectTo: 'login'},
   {path: 'home', component: HomeComponent},
   {path: 'pomodoro', component: PomodoroComponent},
   {path: 'all-notes', component: AllNotesComponent},
   {path: 'all-categories', component: AllCategoriesComponent},
   {path: 'add-note', component: AddNoteComponent},
   {path: 'add-task', component: AddTaskComponent},
-  {path: 'note', component: NoteComponent},
+  {path: 'note/:id', component: NoteComponent},
   {path: 'category', component: CategoryComponent},
   {path: 'edit-profile', component: EditProfileComponent},
   {path: 'login', component: LoginComponent},

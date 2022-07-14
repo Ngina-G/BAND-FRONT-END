@@ -2,7 +2,7 @@
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
 
                 <!-- LOGO -->
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <a href="/home" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline mt-4">
                         <div style="display: flex;color: #fff;">
                             <div id="logo" style="background-color: #1DD8EE;width:40px;height:40px;border: 7px solid #DCB90A; margin-right: .5em;"></div>
@@ -13,11 +13,6 @@
 
                 <!-- NAVBAR -->
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu" >
-                    <li class="nav-item">
-                        <a href="/all-categories" class="nav-link align-middle px-0">
-                            <i class="fa-solid fa-boxes-stacked"></i> <span class="ms-1 d-none d-sm-inline">Categories</span>
-                        </a>
-                    </li>
                     <li>
                         <a href="/all-notes" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-book-open"></i> <span class="ms-1 d-none d-sm-inline">Notes</span>
@@ -42,7 +37,7 @@
                         </li>
                         <li>
                             <a routerLink="/register" class="nav-link px-0 align-middle">
-                                <i class="fa-solid fa-power-off"></i> <span class="ms-1 d-none d-sm-inline">Register</span>
+                                <i class="fa-solid fa-power-off"></i> <span class="ms-1 d-none d-sm-inline">Sign In</span>
                             </a>
                         </li>
                     </ul>
@@ -59,17 +54,17 @@
                         </li>
                     </ul>
 
-                    <li>
+                    <!-- <li>
                         <a href="/all-categories" data-bs-toggle="collapse" class="nav-link px-0 align-middle mt-4">
                             <i class="fa-solid fa-square"></i> 
                             <span class="ms-1 d-none d-sm-inline" style="color: #DCB90A;">My Categories
                                 <ul class="category-list text-white" style="font-size: 15px;margin-top: 1em;">
-                                    <!-- <li *ngFor="let category of categories"></li> -->
+                                    <li *ngFor="let category of categories"></li>
                                     <li><a href="/category:id" style="text-decoration: none;">Math</a></li>
                                 </ul>
                             </span>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>

@@ -13,6 +13,7 @@ import { LiveService } from 'src/app/shared/live.service';
 export class HomeComponent implements OnInit {
   show = true;
   note:any=[];
+  authenticated = false;
 
   completed:any;
   error!: any;
@@ -47,6 +48,11 @@ export class HomeComponent implements OnInit {
       err => {
         this.message = 'You are not logged in';
         Emitters.authEmitter.emit(false);
+      }
+    );
+    Emitters.authEmitter.subscribe(
+      (auth: boolean) => {
+        this.authenticated = auth;
       }
     );
     this.refreshNoteList();

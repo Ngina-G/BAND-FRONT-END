@@ -28,6 +28,7 @@ import { LoginComponent } from './core/authentication/login/login.component';
 import { LiveService } from './shared/live.service';
 import { ApiService } from './core/services/api.service';
 import { EditNoteComponent } from './modules/home/pages/edit-note/edit-note.component';
+import { EditTaskComponent } from './modules/home/pages/edit-task/edit-task.component';
 
 
 
@@ -48,7 +49,8 @@ import { EditNoteComponent } from './modules/home/pages/edit-note/edit-note.comp
     AngieApiComponent,
     RegisterComponent,
     LoginComponent,
-    EditNoteComponent
+    EditNoteComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,

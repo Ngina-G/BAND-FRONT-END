@@ -1,11 +1,14 @@
-<div class="container-fluid back-g">
+ <div class="container-fluid back-g">
     <div class="row flex-nowrap">
-        <app-navbar class="" *ngIf="show"></app-navbar>
+        <app-navbar class=""></app-navbar>
         <div class="col-md-1 mt-3">
             <button type="button" id="sidebarCollapse" class="btn clickBtn" (click)="show=!show">&#9776;</button>    
         </div>
 
-        <div class="col-7 col-md-6" id="home-comp">
+        <!-- BODY -->
+        <h1 *ngIf="!authenticated" style="margin-top:10%; margin-left:20%"> Login to Add Task</h1>         
+
+        <div class="col-7 col-md-6" id="home-comp" *ngIf="authenticated">
             <body>
                 <div class="container">
                     <div class="row d-flex justify-content-end mt-4 w-100 task-form-container">
@@ -27,11 +30,11 @@
                                                 <div class="card-body">
                                                   <div class="d-flex flex-row align-items-center">
                                                     <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
-                                                      placeholder="Add new...">
+                                                      placeholder="Add new..." [(ngModel)]="tasks">
                                                     <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i
                                                         class="fas fa-calendar-alt fa-lg me-3"></i></a>
                                                     <div>
-                                                      <button type="button" class="add-btn p-2 px-3">Add</button>
+                                                      <button type="submit" (click)="addTask()" class="add-btn p-2 px-3">Add</button>
                                                     </div>
                                                   </div>
                                                 </div>
@@ -78,89 +81,51 @@
                 </div>
             </body>
         </div>
+        <div class="modal fade" id="exampleModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+          <div class="modal-dialog modal-fullscreen" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
+              <button type="button" class="close" 
+              data-dismiss="modal" aria-label="Close"
+              (click)="closeClick()" >
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+                <app-edit-task [task]="task" *ngIf=" ActivateAddEditNoteComp" ></app-edit-task>
+              </div>
+          </div>
+          </div>
+      </div>
         <div class="col">
             <div class="col-md-12 ml-5" id="tasks-container">
                 <div class="tasks">
                     <div class="task-cards">
                     <h3 class="text-center">Tasks</h3>
             
-                        <div class="card task-backg mt-4">
-                            <!-- Ngfor task of tasks -->
-                                <div class="form-check mx-4 mt-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        <!-- <div ng-init="limit = 150">
-                                            {{text | limitTo: limit}}
-                                        </div> -->
-                                      Lorem ipsum dolor s ...
-                                    </label>
-                                    <div class="d-flex flex-row justify-content-end ">
-                                        <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
-                                            class="fas fa-pencil-alt me-3"></i></a>
-                                        <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
-                                            class="fas fa-trash-alt"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-muted mx-4 mb-2"><i class="fas fa-info-circle me-2"></i><small>2nd June 2022</small></div>
-                        </div>
+                        
             
-                        <div class="card task-backg mt-4">
+                        <div class="card task-backg mt-4" *ngFor="let task of task |keyvalue">
                             <!-- Ngfor task of tasks -->
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        <!-- <div ng-init="limit = 150">
-                                            {{text | limitTo: limit}}
-                                        </div> -->
-                                      Lorem ipsum dolor s ...
-                                    </label>
-                                    <div class="d-flex flex-row justify-content-end mb-1">
-                                        <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
-                                            class="fas fa-pencil-alt me-3"></i></a>
-                                        <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
-                                            class="fas fa-trash-alt"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-muted"><i class="fas fa-info-circle me-2"></i><small>2nd June 2022</small></div>
+                            <div class="form-check checkbox my-3">
+                              <input class="strikethrough" type="checkbox" value="" id="flexCheckDefault">
+                              <span class="form-check-label h4" for="flexCheckDefault">
+                                  {{task.value.tasks}}
+                              </span>
+                          </div>
+                          <div class="d-flex  flex-row justify-content-between mx-2">
+                              <div class="text-muted mt-2"><i class="fas fa-info-circle me-2" style="font-size: 15px;"></i><small>{{task.value.date|date}}</small></div>
+                              <div class="">
+                                  <button class="text-info btn" data-mdb-toggle="tooltip" title="Edit todo" data-toggle="modal" data-target="#exampleModal" (click)="editClick(task.value)"><i
+                                      class="fas fa-pencil-alt me-3" style="font-size: 20px;"></i></button>
+                                  <button class="btn" data-mdb-toggle="tooltip" title="Delete todo" (click)="deleteClick(task.value.TaskId)">
+                                      <i class="fa-solid fa-trash-can" style="font-size: 20px;"></i>
+                                  </button>
+                              </div>
+                          </div>
                         </div>
-                        <div class="card task-backg mt-4">
-                            <!-- Ngfor task of tasks -->
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        <!-- <div ng-init="limit = 150">
-                                            {{text | limitTo: limit}}
-                                        </div> -->
-                                      Lorem ipsum dolor s ...
-                                    </label>
-                                    <div class="d-flex flex-row justify-content-end mb-1">
-                                        <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
-                                            class="fas fa-pencil-alt me-3"></i></a>
-                                        <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
-                                            class="fas fa-trash-alt"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-muted"><i class="fas fa-info-circle me-2"></i><small>2nd June 2022</small></div>
-                        </div>
-                        <div class="card task-backg mt-4">
-                            <!-- Ngfor task of tasks -->
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        <!-- <div ng-init="limit = 150">
-                                            {{text | limitTo: limit}}
-                                        </div> -->
-                                      Lorem ipsum dolor s ...
-                                    </label>
-                                    <div class="d-flex flex-row justify-content-end mb-1">
-                                        <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
-                                            class="fas fa-pencil-alt me-3"></i></a>
-                                        <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
-                                            class="fas fa-trash-alt"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-muted"><i class="fas fa-info-circle me-2"></i><small>2nd June 2022</small></div>
-                        </div>
+                        
                         
             
                     </div>
