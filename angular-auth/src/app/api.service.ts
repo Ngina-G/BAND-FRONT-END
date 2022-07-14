@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
  readonly APIUrl = " https://auth-doyo.herokuapp.com/notes/";
+ readonly oneNoteUrl = " https://auth-doyo.herokuapp.com/oneNote/";
  readonly deleteUrl = " https://auth-doyo.herokuapp.com/deleteNote/";
  readonly updateUrl = " https://auth-doyo.herokuapp.com/updateNote/"
  readonly profileUrl = " https://auth-doyo.herokuapp.com/api/profile/";
@@ -19,8 +20,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getAllNotes(owner_id): Observable<any> {
-    return this.http.get(this.APIUrl ,owner_id);
+  getAllNotes(): Observable<any> {
+    return this.http.get(this.APIUrl );
+  }
+  getOneNote(NoteId): Observable<any> {
+    return this.http.get(`${this.oneNoteUrl}${NoteId}/` );
   }
   addNote(val:any){
     return this.http.post(this.APIUrl,val);

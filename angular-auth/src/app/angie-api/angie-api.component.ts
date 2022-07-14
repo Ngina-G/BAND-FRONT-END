@@ -17,7 +17,7 @@ export class AngieApiComponent implements OnInit {
     this.getNotes(); 
   }
   getNotes =  () => {
-    this.service.getAllNotes(this.note.owner_id).subscribe(
+    this.service.getAllNotes().subscribe(
       data => {
         this.note = data;
       },
@@ -84,7 +84,7 @@ export class AngieApiComponent implements OnInit {
 
 
   refreshNoteList(){
-    this.service.getAllNotes(this.note.owner_id).subscribe(data => {
+    this.service.getAllNotes().subscribe(data => {
       this.note = data;
     });
   }

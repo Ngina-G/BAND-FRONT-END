@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AngieApiComponent } from './angie-api/angie-api.component';
 import { AddEditNotesComponent } from './add-edit-notes/add-edit-notes.component';
 import { ProfileComponent } from './profile/profile.component';
+import { OneNoteComponent } from './one-note/one-note.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
     NavComponent,
     AngieApiComponent,
     AddEditNotesComponent,
-    ProfileComponent
+    ProfileComponent,
+    OneNoteComponent
   ],
   imports: [
     BrowserModule,
