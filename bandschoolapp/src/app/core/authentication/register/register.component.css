@@ -13,8 +13,7 @@ body {
 .wrapper {
     max-width: 450px;
     margin: 50px auto;
-    padding: 20px 30px;
-    min-height: 300px;
+    min-height: 500px;
     background-color: #ffffff27;
     border-top: 1px solid #ffffff6e;
     border-left: 1px solid #ffffff6e;
