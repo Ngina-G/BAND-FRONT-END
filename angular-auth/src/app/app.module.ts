@@ -9,10 +9,10 @@ import {HomeComponent} from './home/home.component';
 import {NavComponent} from './nav/nav.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { AngieApiComponent } from './angie-api/angie-api.component';
 import { AddEditNotesComponent } from './add-edit-notes/add-edit-notes.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OneNoteComponent } from './one-note/one-note.component';
+import { AngieApiComponent } from './angie-api/angie-api.component';
 
 @NgModule({
   declarations: [

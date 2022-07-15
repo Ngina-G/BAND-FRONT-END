@@ -34,10 +34,10 @@ data-backdrop="static" data-keyboard="false"
         {{note.value.NoteId}}
           {{note.value.title}}
         </div>
-        <a href="/oneNote/{{note.value.NoteId}}">
+        <a href="/home">
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p>{{note.value.notes}}</p>
+            <a href="/home">            <p>{{note.value.notes}}</p>
             <footer><button type="button" class="btn btn-light mr-1"
                 data-toggle="modal" data-target="#exampleModal"
 (click)="editClick(note.value)"
